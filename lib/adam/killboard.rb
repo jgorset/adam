@@ -30,7 +30,14 @@ module Adam
       response = nil
       connection = Net::HTTP.new(uri.host, uri.port)
       connection.start do |http|
-        response = http.get(uri.path + '?' + uri.query + '&'  + query_string)
+        tries = 0
+        begin
+          response = http.get(uri.path + '?' + uri.query + '&'  + query_string)
+        rescue Timeout::Error
+          tries += 1
+          sleep 10
+          retry if tries < 3
+        end
       end
       
       xml = Hpricot.XML(response.body)
