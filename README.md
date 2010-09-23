@@ -1,20 +1,20 @@
-= adam
+# Adam
 
 * http://github.com/frkt/adam
 
-== DESCRIPTION:
+## Description
 
 Adam is a library for all things EVE.
 
-== FEATURES:
+## Features
 
 * Killmail parser
 * Kill log parser
 * EDK-compatible killboard importer
 
-== SYNOPSIS:
+## Synopsis
 
-=== Parse a killmail
+### Parse a killmail
 
     kill = Adam::Killmail.parse(killmail)
   
@@ -25,7 +25,7 @@ Adam is a library for all things EVE.
     kill.loot[0].name             # => Warp Disruptor II
     kill.loot[0].quantity         # => 1
   
-=== Parse a kill log
+### Parse a kill log
 
     kill = Adam::KillLog.parse(kill_log)
   
@@ -38,13 +38,13 @@ Adam is a library for all things EVE.
   
     kill.to_killmail              # => Kill log's killmail equivalent.
   
-=== Import a killboard
+### Import a killboard
   
     killboard = Adam::Killboard.new :uri => 'http://invicta.eve-kill.net/', :feed_uri =>  'http://feed.evsco.net/?a=feed&corp=Invicta.&combined=true'
     killboard.killmails :week => 1, :year => 2010
   
 
-== REQUIREMENTS:
+## Requirements
 
 * Ruby 1.9
 * Hpricot
@@ -53,11 +53,11 @@ Adam is a library for all things EVE.
 
 Note: ActiveRecord and MySQL are only required for parsing kill logs, and only if you don't want to roll your own implementation for the "SolarSystem" and "Item" classes.
 
-== INSTALL:
+## Install
 
 * gem install adam
 
-== LICENSE:
+## License
 
 (The MIT License)
 
