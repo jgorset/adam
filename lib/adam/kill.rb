@@ -86,6 +86,8 @@ module Adam
       killmail
     end
     
+    alias_method :to_s, :to_killmail
+    
   end
   
   class Kill::SolarSystem
