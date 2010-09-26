@@ -55,7 +55,7 @@ Note: ActiveRecord and MySQL are only required for parsing kill logs, and only i
 
 ## Install
 
-* gem install adam
+    gem install adam
 
 ## License
 
