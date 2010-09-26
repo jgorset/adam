@@ -93,7 +93,7 @@ module Adam
         kill.loot = []
         
         if source =~ /Destroyed items:/
-          source[/Destroyed items:\n\n(((.+)\n)*)/, 1].split("\n").each_with_index do |snippet, i|
+          source[/Destroyed items:\n\n(((.+)\n?)*)/, 1].split("\n").each_with_index do |snippet, i|
             loot = Adam::Kill::Loot.new do |l|
               l.name       = snippet[/([^,\(\)]+)/, 1] or raise ValidationError.new(source), "Destroyed item #{i+1} name malformed"
               l.quantity   = snippet =~ /Qty: ([0-9]+)/ ? snippet[/Qty: ([0-9]+)/, 1].to_i : 1
@@ -107,7 +107,7 @@ module Adam
         end
         
         if source =~ /Dropped items:/
-          source[/Dropped items:\n\n(((.+)\n)*)/, 1].split("\n").each_with_index do |snippet, i|
+          source[/Dropped items:\n\n(((.+)\n?)*)/, 1].split("\n").each_with_index do |snippet, i|
             loot = Adam::Kill::Loot.new do |l|
               l.name       = snippet[/([^,\(\)]+)/, 1] or raise ValidationError.new(source), "Dropped item #{i+1} name malformed"
               l.quantity   = snippet =~ /Qty: ([0-9]+)/ ? snippet[/Qty: ([0-9]+)/, 1].to_i : 1
