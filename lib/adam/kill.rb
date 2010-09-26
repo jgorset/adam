@@ -57,10 +57,10 @@ module Adam
       end
 
       killmail << "\n"
-      killmail << "\n"
 
       destroyed_items = loot.select { |l| l.dropped == false }
       unless destroyed_items.empty?
+        killmail << "\n"
         killmail << "Destroyed items:\n"
         killmail << "\n"
         destroyed_items.each do |loot|
@@ -74,6 +74,7 @@ module Adam
 
       dropped_items = loot.select { |l| l.dropped == true }
       unless dropped_items.empty?
+        killmail << "\n"
         killmail << "Dropped items:\n"
         killmail << "\n"
         dropped_items.each do |loot|
