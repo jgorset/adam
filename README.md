@@ -4,7 +4,7 @@
 
 ## Description
 
-Adam is a library for all things EVE.
+Adam is a library for all things [EVE](http://www.eveonline.com/).
 
 ## Features
 
