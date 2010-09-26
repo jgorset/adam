@@ -22,7 +22,7 @@ module Adam
         
         kill.solar_system = Adam::Kill::SolarSystem.new do |ss|
           ss.name             = source[/System: (.+)/, 1] or raise ValidationError.new(source), "Solar system malformed"
-          ss.security_status  = source[/Security: ([\.0-9]+)/, 1] or raise ValidationError.new(source), "Solar system security malformed"
+          ss.security_status  = source[/Security: ([\.0-9]+)/, 1].to_f or raise ValidationError.new(source), "Solar system security malformed"
         end
   
         kill.victim = Adam::Kill::Victim.new do |v|
@@ -54,7 +54,7 @@ module Adam
               kill.involved_parties << Adam::Kill::InvolvedParty.new do |ip|
                 ip.type                   = "PC"
                 ip.pilot                  = snippet[/Name: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} pilot malformed"
-                ip.security_status        = snippet[/Security: ([\-\.0-9]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} security malformed"
+                ip.security_status        = snippet[/Security: ([\-\.0-9]+)/, 1].to_f or raise ValidationError.new(source), "Involved party #{i+1} security malformed"
                 ip.corporation            = snippet[/Corp: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} corporation malformed"
                 ip.alliance               = snippet[/Alliance: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} alliance malformed"
                 ip.faction                = snippet[/Faction: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} faction malformed"
