@@ -41,7 +41,7 @@ module Adam
             killmail << "Faction: NONE\n" unless involved_party.faction
             killmail << "Ship: #{involved_party.ship}\n"
             killmail << "Weapon: #{involved_party.weapon}\n"
-            killmail << "Damage Done: #{involved_party.damage}\n"
+            killmail << "Damage Done: #{involved_party.damage_done}\n"
             killmail << "\n"
             
           when "NPC"
