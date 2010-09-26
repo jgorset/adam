@@ -1,3 +1,5 @@
+require 'digest'
+
 module Adam
   
   class Kill
@@ -87,6 +89,13 @@ module Adam
     end
     
     alias_method :to_s, :to_killmail
+    
+    def digest
+      string = time.to_s + victim.pilot.to_s + victim.ship.to_s + solar_system.to_s + victim.damage_taken.to_s
+      involved_parties.sort! { |x, y| x.damage_done <=> y.damage_done }
+      involved_parties.each { |p| string += p.pilot.to_s + p.damage_done.to_s }
+      Digest::MD5.hexdigest(string)
+    end
     
   end
   
