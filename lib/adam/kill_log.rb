@@ -91,7 +91,7 @@ module Adam
           if loot_element['qtyDestroyed'].to_i > 0
             k.loot << Adam::Kill::Loot.new do |l|
               l.name           = Item.find(loot_element['typeID']).name
-              l.quantity       = loot_element['qtyDropped'].to_i
+              l.quantity       = loot_element['qtyDestroyed'].to_i
               l.cargo          = loot_element['flag'] == '5' ? true : false
               l.drone_bay      = loot_element['flag'] == '87' ? true : false
               l.dropped        = false
