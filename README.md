@@ -1,6 +1,6 @@
 # Adam
 
-* http://github.com/frkt/adam
+* http://github.com/jgorset/adam
 
 ## Description
 
