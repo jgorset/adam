@@ -8,10 +8,6 @@ class KillLogTest < Test::Unit::TestCase
     assert_instance_of Array, Adam::KillLog.parse(load_kill_log('valid_kill_log.xml'))
   end
   
-  def test_parse_invalid_kill_log
-    Adam::KillLog.parse(load_kill_log('invalid_kill_log.xml'))
-  end
-  
   private
   
   def load_kill_log(filename)
