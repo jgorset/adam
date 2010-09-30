@@ -42,9 +42,9 @@ module Adam
         kill.victim = Adam::Kill::Victim.new do |v|
           victim_element = kill_element.at('/victim')
           
-          raise ValidationError, "Victim pilot no longer exists" if victim_element['characterid'] != '0' and victim_element['charactername'].empty?
-          raise ValidationError, "Victim corporation no longer exists" if victim_element['corporationid'] != '0' and victim_element['corporationname'].empty?
-          raise ValidationError, "Victim alliance no longer exists" if victim_element['allianceid'] != '0' and victim_element['alliancename'].empty?
+          raise ValidationError, "Victim pilot no longer exists" if victim_element['charactername'].empty?
+          raise ValidationError, "Victim corporation no longer exists" if victim_element['corporationname'].empty?
+          raise ValidationError, "Victim alliance no longer exists" if victim_element['alliancename'].empty?
           
           v.pilot         = victim_element['charactername']
           v.corporation   = victim_element['corporationname']
@@ -58,9 +58,9 @@ module Adam
         kill_element.search('/rowset[@name=attackers]/row').each do |involved_party_element|
           
           kill.involved_parties << Adam::Kill::InvolvedParty.new do |ip|
-            raise ValidationError, "Involved party pilot no longer exists" if involved_party_element['characterid'] != '0' and involved_party_element['charactername'].empty?
-            raise ValidationError, "Involved party corporation no longer exists" if involved_party_element['corporationid'] != '0' and involved_party_element['corporationname'].empty?
-            raise ValidationError, "Involved party alliance no longer exists" if involved_party_element['allianceid'] != '0' and involved_party_element['alliancename'].empty?
+            raise ValidationError, "Involved party pilot no longer exists" if involved_party_element['charactername'].empty?
+            raise ValidationError, "Involved party corporation no longer exists" if involved_party_element['corporationname'].empty?
+            raise ValidationError, "Involved party alliance no longer exists" if involved_party_element['alliancename'].empty?
             
             ip.type             = involved_party_element['charactername'].empty? ? 'NPC' : 'PC'
             ip.pilot            = involved_party_element['charactername'] unless involved_party_element['charactername'].empty?
