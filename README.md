@@ -36,9 +36,9 @@ Adam is a library for all things [EVE](http://www.eveonline.com/).
     kill.loot[0].name             # => Warp Disruptor II
     kill.loot[0].quantity         # => 1
   
-    kill.to_killmail              # => Kill log's killmail equivalent.
+    kill.to_s                     # => Kill log's killmail equivalent.
   
-### Import a killboard
+### Import killmails
   
     killboard = Adam::Killboard.new :uri => 'http://invicta.eve-kill.net/', :feed_uri =>  'http://feed.evsco.net/?a=feed&corp=Invicta.&combined=true'
     killboard.killmails :week => 1, :year => 2010
