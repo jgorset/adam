@@ -51,7 +51,7 @@ Adam is a library for all things [EVE](http://www.eveonline.com/).
 * ActiveRecord (see note)
 * MySQL (see note)
 
-Note: ActiveRecord and MySQL are only required for parsing kill logs, and only if you don't want to roll your own implementation for the "SolarSystem" and "Item" classes.
+Note: ActiveRecord and MySQL are only required if you don't want to roll your own implementation for the "SolarSystem", "Item" and "Faction" classes.
 
 ## Install
 
