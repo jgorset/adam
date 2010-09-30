@@ -29,17 +29,17 @@ module Adam
     
     def parse_single(kill_element)
 
-      kill = Adam::Kill.new do |kill|
+      Adam::Kill.new do |k|
 
-        kill.eve_id   = kill_element['killid'].to_i
-        kill.time     = Time.parse(kill_element['killtime']).utc
+        k.eve_id   = kill_element['killid'].to_i
+        k.time     = Time.parse(kill_element['killtime']).utc
 
-        kill.solar_system = Adam::Kill::SolarSystem.new do |ss|
+        k.solar_system = Adam::Kill::SolarSystem.new do |ss|
           ss.name             = SolarSystem.find(kill_element['solarsystemid']).name
           ss.security_status  = SolarSystem.find(kill_element['solarsystemid']).security_status
         end
     
-        kill.victim = Adam::Kill::Victim.new do |v|
+        k.victim = Adam::Kill::Victim.new do |v|
           victim_element = kill_element.at('/victim')
           
           raise ValidationError, "Victim pilot no longer exists" if victim_element['charactername'].empty?
@@ -54,10 +54,10 @@ module Adam
           v.damage_taken  = victim_element['damagetaken'].to_i
         end
 
-        kill.involved_parties = []
+        k.involved_parties = []
         kill_element.search('/rowset[@name=attackers]/row').each do |involved_party_element|
           
-          kill.involved_parties << Adam::Kill::InvolvedParty.new do |ip|
+          k.involved_parties << Adam::Kill::InvolvedParty.new do |ip|
             raise ValidationError, "Involved party pilot no longer exists" if involved_party_element['charactername'].empty?
             raise ValidationError, "Involved party corporation no longer exists" if involved_party_element['corporationname'].empty?
             raise ValidationError, "Involved party alliance no longer exists" if involved_party_element['alliancename'].empty?
@@ -76,10 +76,10 @@ module Adam
           
         end
         
-        kill.loot = []
+        k.loot = []
         kill_element.search('/rowset[@name=items]/row').each do |loot_element|
           if loot_element['qtydropped'].to_i > 0
-            kill.loot << Adam::Kill::Loot.new do |l|
+            k.loot << Adam::Kill::Loot.new do |l|
               l.name           = Item.find(loot_element['typeid']).name
               l.quantity       = loot_element['qtydropped'].to_i
               l.cargo          = loot_element['flag'] == '5' ? true : false
@@ -89,7 +89,7 @@ module Adam
           end
 
           if loot_element['qtydestroyed'].to_i > 0
-            kill.loot << Adam::Kill::Loot.new do |l|
+            k.loot << Adam::Kill::Loot.new do |l|
               l.name           = Item.find(loot_element['typeid']).name
               l.quantity       = loot_element['qtydropped'].to_i
               l.cargo          = loot_element['flag'] == '5' ? true : false
@@ -101,7 +101,6 @@ module Adam
 
       end
 
-      return kill
     end
    
   end

@@ -15,7 +15,7 @@ module Adam
       # Normalize line endings
       source.encode! :universal_newline => true
 
-      kill = Adam::Kill.new do |kill|
+      Adam::Kill.new do |kill|
   
         time = source[/([0-9]{4}\.[0-9]{2}\.[0-9]{2} [0-9]{2}:[0-9]{2})/, 1] or raise ValidationError.new(source), "Time malformed"
         time = Time.parse(time + " UTC")
@@ -134,8 +134,7 @@ module Adam
         end
         
       end
-            
-      return kill
+      
     end
     
   end
