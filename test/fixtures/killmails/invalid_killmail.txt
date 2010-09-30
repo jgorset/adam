@@ -1,0 +1,241 @@
+2010.09.10 21:53
+
+Victim: 
+Corp: The Arrow Project
+Alliance: Morsus Mihi
+Faction: NONE
+Destroyed: Dominix
+System: Y-C3EQ
+Security: 0.0
+Damage Taken: 62329
+
+Involved parties:
+
+Name: Minmatar Control Tower / Trux Germani
+Damage Done: 23743
+
+Name: Aragorn Angelus
+Security: 5.0
+Corp: Shade.
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Caldari Navy Bane Torpedo
+Damage Done: 3835
+
+Name: S1r Minealot
+Security: 2.9
+Corp: Shade.
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Shrapnel Bomb
+Damage Done: 3706
+
+Name: Ulic Vos
+Security: -2
+Corp: Invicta.
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Shrapnel Bomb
+Damage Done: 3706
+
+Name: Alessia Suvayarin
+Security: -1.9
+Corp: Invicta.
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Shrapnel Bomb
+Damage Done: 3706
+
+Name: Xiliath
+Security: 0.7
+Corp: Shade.
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Shrapnel Bomb
+Damage Done: 3706
+
+Name: Navigaytion
+Security: 3.1
+Corp: Shade.
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Shrapnel Bomb
+Damage Done: 3688
+
+Name: Elise Randolph
+Security: -1.8
+Corp: Habitual Euthanasia
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Shrapnel Bomb
+Damage Done: 3500
+
+Name: Ikoma Sunblazer
+Security: -1.1
+Corp: Einherjar Rising
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Caldari Navy Bane Torpedo
+Damage Done: 3233
+
+Name: Halsoy
+Security: -0.2
+Corp: Shade.
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Hound
+Weapon: Caldari Navy Bane Torpedo
+Damage Done: 2974
+
+Name: morley1
+Security: -2.7
+Corp: Invicta.
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Manticore
+Weapon: Shrapnel Bomb
+Damage Done: 2800
+
+Name: Chet Desmond
+Security: -3.7
+Corp: Deliverers of Pain
+Alliance: Ev0ke
+Faction: NONE
+Ship: Apocalypse
+Weapon: Tachyon Beam Laser II
+Damage Done: 855
+
+Name: Raist Varis
+Security: -4.3
+Corp: Cataclysm Enterprises
+Alliance: Ev0ke
+Faction: NONE
+Ship: Apocalypse
+Weapon: Tachyon Beam Laser II
+Damage Done: 810
+
+Name: crashilein
+Security: 5.0
+Corp: Evoke.
+Alliance: Ev0ke
+Faction: NONE
+Ship: Tempest
+Weapon: Tempest
+Damage Done: 698
+
+Name: ToxicAid (laid the final blow)
+Security: 2.3
+Corp: Sensus Numinis
+Alliance: Ev0ke
+Faction: NONE
+Ship: Tempest
+Weapon: 1400mm Howitzer Artillery II
+Damage Done: 687
+
+Name: APAS
+Security: 5.0
+Corp: Evoke.
+Alliance: Ev0ke
+Faction: NONE
+Ship: Apocalypse
+Weapon: Tachyon Beam Laser II
+Damage Done: 682
+
+Name: Sargine West
+Security: 0.3
+Corp: Deliverers of Pain
+Alliance: Ev0ke
+Faction: NONE
+Ship: Crusader
+Weapon: Warp Disruptor II
+Damage Done: 0
+
+Name: zinyu
+Security: -2.2
+Corp: The Hull Miners Union
+Alliance: Cry Havoc.
+Faction: NONE
+Ship: Manticore
+Weapon: Siege Missile Launcher II
+Damage Done: 0
+
+Name: Shira Cruise
+Security: 2.5
+Corp: Evoke.
+Alliance: Ev0ke
+Faction: NONE
+Ship: Ares
+Weapon: 125mm Railgun II
+Damage Done: 0
+
+Name: Kriegar
+Security: -9.7
+Corp: PPN United
+Alliance: Ev0ke
+Faction: NONE
+Ship: Tempest
+Weapon: 1400mm Howitzer Artillery II
+Damage Done: 0
+
+Name: Dalikah
+Security: -8.2
+Corp: Trux Germani
+Alliance: Ev0ke
+Faction: NONE
+Ship: Ares
+Weapon: Warp Disruptor II
+Damage Done: 0
+
+Name: Kadorkeule
+Security: 2.8
+Corp: German Angels
+Alliance: Ewoks
+Faction: NONE
+Ship: Megathron
+Weapon: 425mm Compressed Coil Gun I
+Damage Done: 0
+
+
+Destroyed items:
+
+Antimatter Charge L, Qty: 37
+Drone Link Augmentor I
+Salvager I
+425mm 'Scout' I Accelerator Cannon, Qty: 2
+Medium Capacitor Booster II
+Tracking Computer I
+100MN MicroWarpdrive I
+Magnetic Field Stabilizer II
+1600mm Reinforced Rolled Tungsten Plates I
+Energized Adaptive Nano Membrane II
+Cap Booster 800 (Cargo)
+Antimatter Charge L, Qty: 4322 (Cargo)
+Large Trimark Armor Pump I, Qty: 3
+Warden II (Drone Bay)
+Hammerhead II, Qty: 5 (Drone Bay)
+Garde II, Qty: 2 (Drone Bay)
+
+Dropped items:
+
+425mm 'Scout' I Accelerator Cannon
+Antimatter Charge L, Qty: 78
+Stasis Webifier I
+Targeting Range
+Cap Booster 800
+Prototype I Sensor Booster
+Damage Control II
+Magnetic Field Stabilizer II
+1600mm Reinforced Rolled Tungsten Plates I
+Energized Adaptive Nano Membrane II
+Hammerhead II, Qty: 5 (Drone Bay)
+Garde II, Qty: 3 (Drone Bay)
+Warrior II, Qty: 5 (Drone Bay)
+Warden II, Qty: 4 (Drone Bay)

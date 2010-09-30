@@ -1,0 +1,782 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<eveapi version="2">
+  <currentTime>2010-09-08 17:35:32</currentTime>
+  <result>
+    <rowset name="kills" key="killID" columns="killID,solarSystemID,killTime,moonID">
+      <row killID="12763030" solarSystemID="30003792" killTime="2010-05-13 22:55:00" moonID="0">
+        <victim characterID="324513594" characterName="Fireus" corporationID="1000006" corporationName="Deep Core Mining Inc." allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="1297" shipTypeID="11172" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" securityStatus="-0.943687104975873" damageDone="1297" finalBlow="1" weaponTypeID="2183" shipTypeID="11963" />
+
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="29015" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="5301" flag="0" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="30028" flag="0" qtyDropped="10" qtyDestroyed="0" />
+          <row typeID="11578" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="18639" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="30028" flag="5" qtyDropped="8" qtyDestroyed="0" />
+          <row typeID="29015" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="31213" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="6529" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="438" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="2605" flag="0" qtyDropped="1" qtyDestroyed="2" />
+          <row typeID="29013" flag="5" qtyDropped="2" qtyDestroyed="0" />
+        </rowset>
+      </row>
+      <row killID="12762857" solarSystemID="30003797" killTime="2010-05-13 22:44:00" moonID="0">
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" damageTaken="1693" shipTypeID="11188" />
+
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="0" characterName="" corporationID="252377002" corporationName="Sanctum Heavy Industries" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="1693" finalBlow="1" weaponTypeID="0" shipTypeID="27540" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="11578" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="21096" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="3244" flag="0" qtyDropped="2" qtyDestroyed="0" />
+        </rowset>
+      </row>
+
+      <row killID="12715497" solarSystemID="30005320" killTime="2010-05-10 21:07:00" moonID="0">
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" damageTaken="11310" shipTypeID="11963" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="1539044437" characterName="Steven Case" corporationID="306830202" corporationName="The Tuskers" allianceID="1100256851" allianceName="The Tusker Bastards" factionID="0" factionName="" securityStatus="-9.99112185571369" damageDone="11310" finalBlow="1" weaponTypeID="3146" shipTypeID="17722" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="4027" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="16273" flag="5" qtyDropped="0" qtyDestroyed="130" />
+          <row typeID="21096" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="2454" flag="87" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="12773" flag="5" qtyDropped="0" qtyDestroyed="1000" />
+          <row typeID="12076" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="11578" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2897" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="3244" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="31055" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="19814" flag="0" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="11325" flag="0" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="2048" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="11269" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="21896" flag="0" qtyDropped="139" qtyDestroyed="139" />
+          <row typeID="21896" flag="5" qtyDropped="662" qtyDestroyed="0" />
+          <row typeID="2183" flag="87" qtyDropped="0" qtyDestroyed="3" />
+        </rowset>
+      </row>
+      <row killID="12708484" solarSystemID="30003791" killTime="2010-05-10 12:14:00" moonID="0">
+        <victim characterID="177779998" characterName="Alex Rousseau" corporationID="1962410355" corporationName="ZER0." allianceID="878776074" allianceName="IT Alliance" factionID="0" factionName="" damageTaken="352" shipTypeID="607" />
+
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" securityStatus="-0.60747437878821" damageDone="352" finalBlow="1" weaponTypeID="2897" shipTypeID="11963" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="16273" flag="5" qtyDropped="0" qtyDestroyed="350" />
+          <row typeID="21096" flag="0" qtyDropped="0" qtyDestroyed="1" />
+        </rowset>
+      </row>
+      <row killID="12695218" solarSystemID="30003818" killTime="2010-05-09 17:06:00" moonID="0">
+
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" damageTaken="12804" shipTypeID="11963" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="0" characterName="" corporationID="1237139121" corporationName="Celestial Corp" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="12804" finalBlow="1" weaponTypeID="0" shipTypeID="12236" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="4027" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="16273" flag="5" qtyDropped="220" qtyDestroyed="0" />
+          <row typeID="21096" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2048" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="12773" flag="5" qtyDropped="0" qtyDestroyed="790" />
+          <row typeID="3244" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="11578" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="2897" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="12076" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="31055" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="19814" flag="0" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="11325" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="12773" flag="0" qtyDropped="300" qtyDestroyed="0" />
+
+          <row typeID="11269" flag="0" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="21896" flag="5" qtyDropped="0" qtyDestroyed="1200" />
+        </rowset>
+      </row>
+      <row killID="12483432" solarSystemID="30003796" killTime="2010-04-25 10:56:00" moonID="0">
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" damageTaken="22647" shipTypeID="11963" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="782376513" characterName="Thingymawotzit" corporationID="742026685" corporationName="Kangaroos With Frickin Lazerbeams" allianceID="1622450748" allianceName="Negative Ten." factionID="0" factionName="" securityStatus="-9.93430832692749" damageDone="9471" finalBlow="1" weaponTypeID="3146" shipTypeID="29988" />
+          <row characterID="277496470" characterName="Folko D'emon" corporationID="742026685" corporationName="Kangaroos With Frickin Lazerbeams" allianceID="1622450748" allianceName="Negative Ten." factionID="0" factionName="" securityStatus="-10" damageDone="5398" finalBlow="0" weaponTypeID="12013" shipTypeID="12013" />
+
+          <row characterID="311722328" characterName="Urice" corporationID="742026685" corporationName="Kangaroos With Frickin Lazerbeams" allianceID="1622450748" allianceName="Negative Ten." factionID="0" factionName="" securityStatus="-9.8" damageDone="5125" finalBlow="0" weaponTypeID="21640" shipTypeID="24696" />
+          <row characterID="1237705955" characterName="A HOBO" corporationID="742026685" corporationName="Kangaroos With Frickin Lazerbeams" allianceID="1622450748" allianceName="Negative Ten." factionID="0" factionName="" securityStatus="-9.9" damageDone="1999" finalBlow="0" weaponTypeID="15798" shipTypeID="17738" />
+          <row characterID="1601777732" characterName="I2aven" corporationID="742026685" corporationName="Kangaroos With Frickin Lazerbeams" allianceID="1622450748" allianceName="Negative Ten." factionID="0" factionName="" securityStatus="-9.8" damageDone="654" finalBlow="0" weaponTypeID="24702" shipTypeID="24702" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="4027" flag="0" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="16273" flag="5" qtyDropped="0" qtyDestroyed="290" />
+          <row typeID="21096" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2048" flag="0" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="11269" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="3244" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="11578" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2897" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="12076" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="31055" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="19814" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="11325" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="12773" flag="0" qtyDropped="320" qtyDestroyed="0" />
+
+          <row typeID="2488" flag="87" qtyDropped="3" qtyDestroyed="5" />
+          <row typeID="19806" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="21896" flag="5" qtyDropped="1200" qtyDestroyed="0" />
+          <row typeID="12773" flag="5" qtyDropped="979" qtyDestroyed="0" />
+        </rowset>
+      </row>
+      <row killID="12220101" solarSystemID="30000865" killTime="2010-04-07 20:23:00" moonID="0">
+        <victim characterID="243375318" characterName="Guy Delbane" corporationID="144965822" corporationName="Oberon Incorporated" allianceID="628991027" allianceName="Morsus Mihi" factionID="0" factionName="" damageTaken="199" shipTypeID="11184" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" securityStatus="-0.445290652770751" damageDone="199" finalBlow="1" weaponTypeID="2881" shipTypeID="17932" />
+          <row characterID="716425053" characterName="Ottersmacker" corporationID="391306375" corporationName="" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="-3.2" damageDone="0" finalBlow="0" weaponTypeID="19810" shipTypeID="12034" />
+          <row characterID="1268803307" characterName="Shadow2004" corporationID="361967369" corporationName="Viper-Squad" allianceID="933731581" allianceName="Triumvirate." factionID="0" factionName="" securityStatus="1.4" damageDone="0" finalBlow="0" weaponTypeID="2404" shipTypeID="22464" />
+          <row characterID="620817489" characterName="iiOs" corporationID="361967369" corporationName="Viper-Squad" allianceID="933731581" allianceName="Triumvirate." factionID="0" factionName="" securityStatus="4.2" damageDone="0" finalBlow="0" weaponTypeID="2488" shipTypeID="17932" />
+          <row characterID="390940417" characterName="Sister Disassembly" corporationID="361967369" corporationName="Viper-Squad" allianceID="933731581" allianceName="Triumvirate." factionID="0" factionName="" securityStatus="1.1" damageDone="0" finalBlow="0" weaponTypeID="2889" shipTypeID="17932" />
+          <row characterID="1480031795" characterName="ramand" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" securityStatus="-1.3" damageDone="0" finalBlow="0" weaponTypeID="2889" shipTypeID="17932" />
+          <row characterID="281275410" characterName="Cambarus" corporationID="515150526" corporationName="The Compass Reloaded" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="1.2" damageDone="0" finalBlow="0" weaponTypeID="3178" shipTypeID="17928" />
+          <row characterID="184161276" characterName="Protar" corporationID="423229765" corporationName="eXceed Inc." allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" securityStatus="-1.8" damageDone="0" finalBlow="0" weaponTypeID="19812" shipTypeID="12034" />
+          <row characterID="202076923" characterName="Intigo" corporationID="220243444" corporationName="Genos Occidere" allianceID="551692893" allianceName="HYDRA RELOADED" factionID="0" factionName="" securityStatus="-1.9" damageDone="0" finalBlow="0" weaponTypeID="2881" shipTypeID="17932" />
+
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="31177" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="448" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="1447" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="12563" flag="5" qtyDropped="0" qtyDestroyed="4" />
+          <row typeID="31153" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="1405" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="1236" flag="0" qtyDropped="1" qtyDestroyed="1" />
+
+          <row typeID="3001" flag="0" qtyDropped="2" qtyDestroyed="2" />
+          <row typeID="440" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="246" flag="0" qtyDropped="3" qtyDestroyed="1" />
+          <row typeID="28678" flag="5" qtyDropped="1" qtyDestroyed="0" />
+        </rowset>
+      </row>
+      <row killID="9988276" solarSystemID="30000102" killTime="2009-11-26 22:06:00" moonID="0">
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="1000080" corporationName="Ministry of War" allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="10534" shipTypeID="11965" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+
+          <row characterID="500149661" characterName="Anders1" corporationID="1608971902" corporationName="The Order of Chivalry" allianceID="1550724751" allianceName="Nex Eternus" factionID="0" factionName="" securityStatus="-3.05352715224384" damageDone="7855" finalBlow="1" weaponTypeID="2456" shipTypeID="24698" />
+          <row characterID="1075378758" characterName="Aeron Kutia" corporationID="843606048" corporationName="Decemviri" allianceID="1550724751" allianceName="Nex Eternus" factionID="0" factionName="" securityStatus="-7.5" damageDone="2044" finalBlow="0" weaponTypeID="11969" shipTypeID="11969" />
+          <row characterID="628068334" characterName="DDemon" corporationID="1849705693" corporationName="Volatile Instability" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="-9.2" damageDone="442" finalBlow="0" weaponTypeID="16471" shipTypeID="20125" />
+          <row characterID="0" characterName="" corporationID="500019" corporationName="Sansha's Nation" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="193" finalBlow="0" weaponTypeID="0" shipTypeID="17071" />
+          <row characterID="666454142" characterName="MalarEnares" corporationID="843606048" corporationName="Decemviri" allianceID="1550724751" allianceName="Nex Eternus" factionID="0" factionName="" securityStatus="-3.1" damageDone="0" finalBlow="0" weaponTypeID="2897" shipTypeID="22444" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="5403" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="4027" flag="0" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="5320" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="11269" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="21640" flag="87" qtyDropped="5" qtyDestroyed="2" />
+          <row typeID="29007" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="12058" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2024" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="5839" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="11317" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="29005" flag="5" qtyDropped="0" qtyDestroyed="2" />
+
+          <row typeID="25896" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="11578" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="16471" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="2488" flag="87" qtyDropped="0" qtyDestroyed="6" />
+          <row typeID="11289" flag="5" qtyDropped="5" qtyDestroyed="0" />
+          <row typeID="3530" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="4475" flag="0" qtyDropped="1" qtyDestroyed="0" />
+        </rowset>
+      </row>
+
+      <row killID="9988240" solarSystemID="30000102" killTime="2009-11-26 22:04:00" moonID="0">
+        <victim characterID="1690214377" characterName="Minellalt Kal" corporationID="843606048" corporationName="Decemviri" allianceID="1550724751" allianceName="Nex Eternus" factionID="0" factionName="" damageTaken="99607" shipTypeID="17726" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1000080" corporationName="Ministry of War" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="-0.396227112954664" damageDone="8460" finalBlow="1" weaponTypeID="2185" shipTypeID="11965" />
+          <row characterID="0" characterName="" corporationID="500019" corporationName="Sansha's Nation" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="64954" finalBlow="0" weaponTypeID="0" shipTypeID="17082" />
+          <row characterID="1815940557" characterName="Mallegant VanSaar" corporationID="1019906116" corporationName="Invicta." allianceID="0" allianceName="" factionID="500002" factionName="Minmatar Republic" securityStatus="-4.1" damageDone="26193" finalBlow="0" weaponTypeID="645" shipTypeID="645" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="2032" flag="0" qtyDropped="1" qtyDestroyed="1" />
+
+          <row typeID="11648" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="28999" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="15810" flag="0" qtyDropped="1" qtyDestroyed="2" />
+          <row typeID="1978" flag="0" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="3057" flag="0" qtyDropped="4" qtyDestroyed="4" />
+          <row typeID="258" flag="5" qtyDropped="8" qtyDestroyed="0" />
+          <row typeID="29001" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2185" flag="87" qtyDropped="4" qtyDestroyed="1" />
+          <row typeID="13972" flag="0" qtyDropped="1" qtyDestroyed="1" />
+
+          <row typeID="23105" flag="5" qtyDropped="7" qtyDestroyed="5" />
+          <row typeID="13956" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="23111" flag="5" qtyDropped="5" qtyDestroyed="3" />
+          <row typeID="2456" flag="87" qtyDropped="2" qtyDestroyed="2" />
+          <row typeID="25948" flag="0" qtyDropped="0" qtyDestroyed="3" />
+          <row typeID="12820" flag="5" qtyDropped="6" qtyDestroyed="11" />
+          <row typeID="23113" flag="5" qtyDropped="3" qtyDestroyed="5" />
+          <row typeID="23105" flag="0" qtyDropped="3" qtyDestroyed="5" />
+          <row typeID="23119" flag="5" qtyDropped="3" qtyDestroyed="5" />
+
+          <row typeID="14070" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="23107" flag="5" qtyDropped="3" qtyDestroyed="5" />
+        </rowset>
+      </row>
+      <row killID="9854182" solarSystemID="30000102" killTime="2009-11-17 10:51:00" moonID="0">
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" damageTaken="25711" shipTypeID="24696" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="500149661" characterName="Anders1" corporationID="1608971902" corporationName="The Order of Chivalry" allianceID="1550724751" allianceName="Nex Eternus" factionID="0" factionName="" securityStatus="-2.77861532037879" damageDone="13807" finalBlow="1" weaponTypeID="2629" shipTypeID="24698" />
+          <row characterID="695565192" characterName="Arn0ld Schwarzenegger" corporationID="1608971902" corporationName="The Order of Chivalry" allianceID="1550724751" allianceName="Nex Eternus" factionID="0" factionName="" securityStatus="-0.4" damageDone="11904" finalBlow="0" weaponTypeID="2456" shipTypeID="22470" />
+
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="530" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="3520" flag="0" qtyDropped="6" qtyDestroyed="1" />
+          <row typeID="11317" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="3244" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="1306" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="23089" flag="0" qtyDropped="3" qtyDestroyed="4" />
+          <row typeID="527" flag="0" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="12052" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="2048" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2364" flag="0" qtyDropped="1" qtyDestroyed="2" />
+          <row typeID="29011" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="1952" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="12818" flag="5" qtyDropped="0" qtyDestroyed="7" />
+        </rowset>
+      </row>
+      <row killID="9848505" solarSystemID="30005295" killTime="2009-11-16 23:21:00" moonID="0">
+
+        <victim characterID="1815940557" characterName="Mallegant VanSaar" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" damageTaken="443" shipTypeID="670" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="0.0673226859761877" damageDone="443" finalBlow="1" weaponTypeID="3634" shipTypeID="596" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed" />
+      </row>
+      <row killID="9829840" solarSystemID="30001909" killTime="2009-11-15 18:10:00" moonID="0">
+        <victim characterID="912252108" characterName="Mav Taron" corporationID="1836116188" corporationName="Esto Perpetua" allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="21753" shipTypeID="24702" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="0.0673226859761877" damageDone="9227" finalBlow="1" weaponTypeID="3520" shipTypeID="12003" />
+          <row characterID="0" characterName="" corporationID="1000162" corporationName="True Power" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="10177" finalBlow="0" weaponTypeID="0" shipTypeID="23407" />
+          <row characterID="1815940557" characterName="Mallegant VanSaar" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="-3.5" damageDone="2349" finalBlow="0" weaponTypeID="28213" shipTypeID="12005" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="31047" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="2048" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="519" flag="0" qtyDropped="1" qtyDestroyed="2" />
+          <row typeID="31682" flag="0" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="527" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="12052" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="193" flag="5" qtyDropped="0" qtyDestroyed="4564" />
+          <row typeID="16505" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2032" flag="0" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="30999" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="25861" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="3530" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2913" flag="0" qtyDropped="4" qtyDestroyed="2" />
+
+          <row typeID="16383" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="193" flag="0" qtyDropped="72" qtyDestroyed="144" />
+        </rowset>
+      </row>
+      <row killID="9777362" solarSystemID="30001887" killTime="2009-11-11 22:27:00" moonID="0">
+        <victim characterID="1587102099" characterName="Wookie 1" corporationID="1576307093" corporationName="Debitum Naturae" allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="363" shipTypeID="670" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="-3.57872003689447" damageDone="363" finalBlow="1" weaponTypeID="2937" shipTypeID="11999" />
+        </rowset>
+
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed" />
+      </row>
+      <row killID="9777339" solarSystemID="30001887" killTime="2009-11-11 22:26:00" moonID="0">
+        <victim characterID="1587102099" characterName="Wookie 1" corporationID="1576307093" corporationName="Debitum Naturae" allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="531" shipTypeID="11132" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="-3.57872003689447" damageDone="531" finalBlow="1" weaponTypeID="2937" shipTypeID="11999" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed" />
+      </row>
+
+      <row killID="9775199" solarSystemID="30001907" killTime="2009-11-11 20:27:00" moonID="0">
+        <victim characterID="1004363711" characterName="fairimear" corporationID="1836116188" corporationName="Esto Perpetua" allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="4477" shipTypeID="622" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="-3.60375093862153" damageDone="4477" finalBlow="1" weaponTypeID="3520" shipTypeID="12003" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="492" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="191" flag="0" qtyDropped="22" qtyDestroyed="0" />
+          <row typeID="5401" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="12052" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="4025" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="1244" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="193" flag="0" qtyDropped="0" qtyDestroyed="16" />
+          <row typeID="1236" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="5631" flag="0" qtyDropped="0" qtyDestroyed="1" />
+        </rowset>
+      </row>
+      <row killID="9693444" solarSystemID="30001907" killTime="2009-11-06 06:26:00" moonID="0">
+
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" damageTaken="5967" shipTypeID="12038" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="0" characterName="" corporationID="1000162" corporationName="True Power" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="5967" finalBlow="1" weaponTypeID="0" shipTypeID="11916" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="2506" flag="5" qtyDropped="0" qtyDestroyed="1961" />
+          <row typeID="8117" flag="0" qtyDropped="1" qtyDestroyed="2" />
+          <row typeID="19171" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="11578" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="18664" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="2032" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="31598" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="22291" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="2506" flag="0" qtyDropped="0" qtyDestroyed="21" />
+          <row typeID="5837" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="31620" flag="0" qtyDropped="0" qtyDestroyed="1" />
+        </rowset>
+      </row>
+
+      <row killID="9683476" solarSystemID="30001958" killTime="2009-11-05 14:34:00" moonID="0">
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" damageTaken="5346" shipTypeID="627" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="645541146" characterName="Unfortunate Accident" corporationID="1000107" corporationName="The Scope" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0.00893380115769893" damageDone="5346" finalBlow="1" weaponTypeID="3122" shipTypeID="641" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="21096" flag="0" qtyDropped="0" qtyDestroyed="1" />
+        </rowset>
+      </row>
+
+      <row killID="9673414" solarSystemID="30001663" killTime="2009-11-04 19:37:00" moonID="0">
+        <victim characterID="748755777" characterName="korz230" corporationID="787664613" corporationName="" allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="382" shipTypeID="670" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="-9.95193236471643" damageDone="382" finalBlow="1" weaponTypeID="2913" shipTypeID="12013" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed" />
+      </row>
+      <row killID="9673373" solarSystemID="30001663" killTime="2009-11-04 19:34:00" moonID="0">
+        <victim characterID="748755777" characterName="korz230" corporationID="787664613" corporationName="" allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="990" shipTypeID="17480" />
+
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="-9.94365276159143" damageDone="990" finalBlow="1" weaponTypeID="2913" shipTypeID="12013" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="524" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="10998" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="1317" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="16278" flag="0" qtyDropped="1" qtyDestroyed="0" />
+        </rowset>
+
+      </row>
+      <row killID="9642610" solarSystemID="30000142" killTime="2009-11-02 13:02:00" moonID="0">
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" damageTaken="374" shipTypeID="670" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="1392603353" characterName="Asamael" corporationID="145354976" corporationName="Tropical Killer Bananas" allianceID="753644383" allianceName="Privateer Alliance" factionID="0" factionName="" securityStatus="3.42837705670715" damageDone="374" finalBlow="1" weaponTypeID="3146" shipTypeID="29988" />
+          <row characterID="1787552247" characterName="Greening" corporationID="1298429913" corporationName="Interstellar Brotherhood of Gravediggers" allianceID="753644383" allianceName="Privateer Alliance" factionID="0" factionName="" securityStatus="-1.9" damageDone="0" finalBlow="0" weaponTypeID="10631" shipTypeID="11379" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed" />
+      </row>
+
+      <row killID="9638307" solarSystemID="30000142" killTime="2009-11-02 02:00:00" moonID="0">
+        <victim characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" damageTaken="27766" shipTypeID="644" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="852837230" characterName="Rico Felix" corporationID="1298429913" corporationName="Interstellar Brotherhood of Gravediggers" allianceID="753644383" allianceName="Privateer Alliance" factionID="0" factionName="" securityStatus="-1.12740204423141" damageDone="1037" finalBlow="1" weaponTypeID="2801" shipTypeID="12034" />
+          <row characterID="0" characterName="" corporationID="1000035" corporationName="Caldari Navy" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="19942" finalBlow="0" weaponTypeID="0" shipTypeID="11521" />
+          <row characterID="0" characterName="" corporationID="1000125" corporationName="CONCORD" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="6787" finalBlow="0" weaponTypeID="0" shipTypeID="3885" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="1403" flag="0" qtyDropped="3" qtyDestroyed="0" />
+
+          <row typeID="2046" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="11289" flag="0" qtyDropped="2" qtyDestroyed="4" />
+          <row typeID="9808" flag="0" qtyDropped="3" qtyDestroyed="5" />
+          <row typeID="11329" flag="0" qtyDropped="3" qtyDestroyed="0" />
+          <row typeID="3576" flag="0" qtyDropped="1" qtyDestroyed="2" />
+        </rowset>
+      </row>
+      <row killID="9638306" solarSystemID="30000142" killTime="2009-11-02 02:00:00" moonID="0">
+        <victim characterID="1259297187" characterName="Stass Alie" corporationID="1473113661" corporationName="Hungarian Operational Team" allianceID="0" allianceName="" factionID="0" factionName="" damageTaken="2057" shipTypeID="12733" />
+
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="-9.9415932018748" damageDone="2057" finalBlow="1" weaponTypeID="9808" shipTypeID="644" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="25596" flag="5" qtyDropped="5" qtyDestroyed="0" />
+          <row typeID="20138" flag="5" qtyDropped="3" qtyDestroyed="0" />
+          <row typeID="2103" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="25599" flag="5" qtyDropped="11" qtyDestroyed="0" />
+          <row typeID="2444" flag="5" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="254" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="7291" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="13320" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="10694" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="464" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="25601" flag="5" qtyDropped="0" qtyDestroyed="19" />
+          <row typeID="2020" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="6073" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="6296" flag="5" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="19923" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="6293" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="11337" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="12066" flag="5" qtyDropped="0" qtyDestroyed="3" />
+          <row typeID="230" flag="5" qtyDropped="0" qtyDestroyed="100" />
+          <row typeID="16483" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="25604" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="7411" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="1973" flag="5" qtyDropped="0" qtyDestroyed="4" />
+
+          <row typeID="578" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="463" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="1405" flag="5" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="262" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="20240" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="206" flag="5" qtyDropped="0" qtyDestroyed="100" />
+          <row typeID="9291" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="25593" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="216" flag="5" qtyDropped="0" qtyDestroyed="100" />
+
+          <row typeID="1319" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="2464" flag="5" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="213" flag="5" qtyDropped="100" qtyDestroyed="0" />
+          <row typeID="483" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="38" flag="5" qtyDropped="711" qtyDestroyed="0" />
+          <row typeID="439" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="523" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="498" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="8749" flag="5" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="7219" flag="5" qtyDropped="3" qtyDestroyed="0" />
+          <row typeID="25591" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="16373" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="12056" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="1957" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2004" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="10629" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="520" flag="5" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="530" flag="5" qtyDropped="2" qtyDestroyed="0" />
+
+          <row typeID="25624" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="1875" flag="5" qtyDropped="3" qtyDestroyed="0" />
+          <row typeID="9772" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="7169" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="3552" flag="5" qtyDropped="20" qtyDestroyed="0" />
+          <row typeID="533" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="25588" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="16355" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="2193" flag="5" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="11255" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="246" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="25600" flag="5" qtyDropped="38" qtyDestroyed="0" />
+          <row typeID="25603" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="223" flag="5" qtyDropped="0" qtyDestroyed="100" />
+          <row typeID="1547" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="577" flag="5" qtyDropped="4" qtyDestroyed="0" />
+          <row typeID="1818" flag="5" qtyDropped="0" qtyDestroyed="100" />
+          <row typeID="222" flag="5" qtyDropped="100" qtyDestroyed="0" />
+
+          <row typeID="1977" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="265" flag="5" qtyDropped="100" qtyDestroyed="0" />
+          <row typeID="226" flag="5" qtyDropped="200" qtyDestroyed="0" />
+          <row typeID="252" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="21815" flag="5" qtyDropped="5" qtyDestroyed="0" />
+          <row typeID="229" flag="5" qtyDropped="100" qtyDestroyed="0" />
+          <row typeID="10692" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="3993" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="570" flag="5" qtyDropped="6" qtyDestroyed="0" />
+
+          <row typeID="25598" flag="5" qtyDropped="0" qtyDestroyed="10" />
+          <row typeID="4475" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="10836" flag="5" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="8335" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="573" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="16369" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="208" flag="5" qtyDropped="100" qtyDestroyed="0" />
+          <row typeID="261" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="31119" flag="0" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="7373" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2476" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="8091" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="31155" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="34" flag="5" qtyDropped="0" qtyDestroyed="36891" />
+          <row typeID="2108" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="529" flag="5" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="37" flag="5" qtyDropped="0" qtyDestroyed="1660" />
+          <row typeID="2603" flag="5" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="19929" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="575" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="10870" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="2486" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="207" flag="5" qtyDropped="0" qtyDestroyed="400" />
+          <row typeID="2173" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="8579" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="9521" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="5445" flag="5" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="36" flag="5" qtyDropped="448" qtyDestroyed="0" />
+          <row typeID="3538" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="1405" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="2579" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="39" flag="5" qtyDropped="5" qtyDestroyed="0" />
+          <row typeID="1254" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="16521" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="8291" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="501" flag="5" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="4791" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="1319" flag="0" qtyDropped="1" qtyDestroyed="1" />
+          <row typeID="248" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="10678" flag="5" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="524" flag="5" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="225" flag="5" qtyDropped="200" qtyDestroyed="0" />
+          <row typeID="442" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="10688" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="3829" flag="5" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="251" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="11732" flag="5" qtyDropped="36" qtyDestroyed="0" />
+          <row typeID="16523" flag="5" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="11321" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="218" flag="5" qtyDropped="0" qtyDestroyed="100" />
+          <row typeID="224" flag="5" qtyDropped="0" qtyDestroyed="100" />
+          <row typeID="2331" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="2291" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="3887" flag="5" qtyDropped="2" qtyDestroyed="0" />
+
+          <row typeID="10998" flag="0" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="9660" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="1246" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="8750" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="447" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="568" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="25590" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="11297" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="25594" flag="5" qtyDropped="0" qtyDestroyed="1" />
+
+          <row typeID="2183" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="256" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="565" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="571" flag="5" qtyDropped="0" qtyDestroyed="2" />
+          <row typeID="16361" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="243" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="200" flag="5" qtyDropped="100" qtyDestroyed="0" />
+          <row typeID="25597" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="1244" flag="5" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="7371" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="11578" flag="0" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="4831" flag="5" qtyDropped="2" qtyDestroyed="0" />
+          <row typeID="8103" flag="5" qtyDropped="1" qtyDestroyed="0" />
+          <row typeID="7220" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="2018" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="35" flag="5" qtyDropped="0" qtyDestroyed="4218" />
+          <row typeID="11489" flag="5" qtyDropped="1" qtyDestroyed="0">
+            <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+
+              <row typeID="25598" flag="0" qtyDropped="81" qtyDestroyed="0" />
+              <row typeID="1201" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="264" flag="0" qtyDropped="10" qtyDestroyed="0" />
+              <row typeID="3987" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="234" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="3839" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="25604" flag="0" qtyDropped="5" qtyDestroyed="0" />
+              <row typeID="3829" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="460" flag="0" qtyDropped="3" qtyDestroyed="0" />
+
+              <row typeID="1539" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="10870" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="8419" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="210" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="8581" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="25606" flag="0" qtyDropped="18" qtyDestroyed="0" />
+              <row typeID="1547" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="580" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="2203" flag="0" qtyDropped="5" qtyDestroyed="0" />
+
+              <row typeID="8265" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="3596" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="2173" flag="0" qtyDropped="8" qtyDestroyed="0" />
+              <row typeID="238" flag="0" qtyDropped="200" qtyDestroyed="0" />
+              <row typeID="2291" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="529" flag="0" qtyDropped="4" qtyDestroyed="0" />
+              <row typeID="25588" flag="0" qtyDropped="24" qtyDestroyed="0" />
+              <row typeID="9728" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="1816" flag="0" qtyDropped="100" qtyDestroyed="0" />
+
+              <row typeID="219" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="3977" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="224" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="245" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="1551" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="12344" flag="0" qtyDropped="4" qtyDestroyed="0" />
+              <row typeID="25590" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="494" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="3653" flag="0" qtyDropped="3" qtyDestroyed="0" />
+
+              <row typeID="195" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="9329" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="3887" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="5341" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="3953" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="6131" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="2295" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="1445" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="25601" flag="0" qtyDropped="79" qtyDestroyed="0" />
+
+              <row typeID="3606" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="3576" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="565" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="3554" flag="0" qtyDropped="50" qtyDestroyed="0" />
+              <row typeID="483" flag="0" qtyDropped="5" qtyDestroyed="0" />
+              <row typeID="570" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="2193" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="11353" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="1820" flag="0" qtyDropped="100" qtyDestroyed="0" />
+
+              <row typeID="223" flag="0" qtyDropped="200" qtyDestroyed="0" />
+              <row typeID="228" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="233" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="1959" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="25603" flag="0" qtyDropped="10" qtyDestroyed="0" />
+              <row typeID="2103" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="12261" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="572" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="577" flag="0" qtyDropped="3" qtyDestroyed="0" />
+
+              <row typeID="25599" flag="0" qtyDropped="95" qtyDestroyed="0" />
+              <row typeID="10838" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="260" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="199" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="1822" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="204" flag="0" qtyDropped="200" qtyDestroyed="0" />
+              <row typeID="399" flag="0" qtyDropped="4" qtyDestroyed="0" />
+              <row typeID="3993" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="25605" flag="0" qtyDropped="26" qtyDestroyed="0" />
+
+              <row typeID="461" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="574" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="497" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="267" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="1808" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="211" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="2454" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="1353" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="524" flag="0" qtyDropped="5" qtyDestroyed="0" />
+
+              <row typeID="442" flag="0" qtyDropped="4" qtyDestroyed="0" />
+              <row typeID="5137" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="8747" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="15331" flag="0" qtyDropped="110" qtyDestroyed="0" />
+              <row typeID="25561" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="3566" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="581" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="499" flag="0" qtyDropped="5" qtyDestroyed="0" />
+              <row typeID="1185" flag="0" qtyDropped="3" qtyDestroyed="0" />
+
+              <row typeID="25592" flag="0" qtyDropped="9" qtyDestroyed="0" />
+              <row typeID="1810" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="8297" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="213" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="6531" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="218" flag="0" qtyDropped="200" qtyDestroyed="0" />
+              <row typeID="239" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="439" flag="0" qtyDropped="7" qtyDestroyed="0" />
+              <row typeID="526" flag="0" qtyDropped="4" qtyDestroyed="0" />
+
+              <row typeID="3941" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="444" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="11283" flag="0" qtyDropped="20" qtyDestroyed="0" />
+              <row typeID="12225" flag="0" qtyDropped="4" qtyDestroyed="0" />
+              <row typeID="10884" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="3552" flag="0" qtyDropped="30" qtyDestroyed="0" />
+              <row typeID="25589" flag="0" qtyDropped="14" qtyDestroyed="0" />
+              <row typeID="25594" flag="0" qtyDropped="24" qtyDestroyed="0" />
+              <row typeID="194" flag="0" qtyDropped="100" qtyDestroyed="0" />
+
+              <row typeID="10629" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="220" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="6569" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="25600" flag="0" qtyDropped="71" qtyDestroyed="0" />
+              <row typeID="11285" flag="0" qtyDropped="20" qtyDestroyed="0" />
+              <row typeID="6001" flag="0" qtyDropped="4" qtyDestroyed="0" />
+              <row typeID="3528" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="393" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="2018" flag="0" qtyDropped="3" qtyDestroyed="0" />
+
+              <row typeID="20138" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="257" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="2331" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="523" flag="0" qtyDropped="4" qtyDestroyed="0" />
+              <row typeID="1824" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="8583" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="2293" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="227" flag="0" qtyDropped="100" qtyDestroyed="0" />
+              <row typeID="3586" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+              <row typeID="8537" flag="0" qtyDropped="1" qtyDestroyed="0" />
+            </rowset>
+          </row>
+          <row typeID="3468" flag="5" qtyDropped="1" qtyDestroyed="0">
+            <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+              <row typeID="5865" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="16469" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="16495" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="8221" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+              <row typeID="7892" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="20218" flag="0" qtyDropped="4" qtyDestroyed="0" />
+              <row typeID="5841" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="6159" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="6717" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="496" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="14295" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="4833" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="16333" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+              <row typeID="8219" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="8177" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="4025" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="16467" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="8173" flag="0" qtyDropped="3" qtyDestroyed="0" />
+              <row typeID="5403" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="8265" flag="0" qtyDropped="2" qtyDestroyed="0" />
+              <row typeID="5839" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="14164" flag="0" qtyDropped="1" qtyDestroyed="0" />
+
+              <row typeID="5837" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="8261" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="21450" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="8225" flag="0" qtyDropped="1" qtyDestroyed="0" />
+              <row typeID="4575" flag="0" qtyDropped="1" qtyDestroyed="0" />
+            </rowset>
+          </row>
+        </rowset>
+      </row>
+
+      <row killID="9636594" solarSystemID="30001664" killTime="2009-11-01 23:32:00" moonID="0">
+        <victim characterID="1174535188" characterName="deChristo" corporationID="1675268952" corporationName="The Powers that Be Mining Enterprise" allianceID="1990822544" allianceName="0REC0RE" factionID="0" factionName="" damageTaken="11061" shipTypeID="626" />
+        <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+          <row characterID="890734292" characterName="Caelum Dominus" corporationID="1019906116" corporationName="Invicta." allianceID="1535242673" allianceName="Advocated Destruction" factionID="0" factionName="" securityStatus="-9.93505118499999" damageDone="6271" finalBlow="1" weaponTypeID="21640" shipTypeID="11965" />
+          <row characterID="0" characterName="" corporationID="1000162" corporationName="True Power" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="4790" finalBlow="0" weaponTypeID="0" shipTypeID="10028" />
+        </rowset>
+        <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+          <row typeID="4433" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="4791" flag="5" qtyDropped="1" qtyDestroyed="0" />
+
+          <row typeID="452" flag="5" qtyDropped="0" qtyDestroyed="1" />
+          <row typeID="25592" flag="5" qtyD
