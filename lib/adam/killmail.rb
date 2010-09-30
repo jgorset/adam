@@ -1,6 +1,7 @@
-require "adam/killmail/validation_error"
+require 'adam/killmail/validation_error'
+require 'models' unless defined?(SolarSystem) and defined?(Item) and defined?(Faction)
 
-require "time"
+require 'time'
 
 module Adam
   
@@ -24,6 +25,8 @@ module Adam
           ss.name             = source[/System: (.+)/, 1] or raise ValidationError.new(source), "Solar system malformed"
           ss.security_status  = source[/Security: ([\.0-9]+)/, 1].to_f or raise ValidationError.new(source), "Solar system security malformed"
         end
+        
+        raise ValidationError.new(source), "No solar system called '#{kill.solar_system.name}' exists" unless SolarSystem.exists? :name => kill.solar_system.name
   
         kill.victim = Adam::Kill::Victim.new do |v|
           v.pilot         = source[/Victim: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim pilot malformed"
@@ -41,6 +44,10 @@ module Adam
           v.faction = false if v.faction =~ /unknown|none/i
         end
         
+        raise ValidationError.new(source), "No faction called '#{victim.faction}' exists" if victim.faction and !Faction.exists? :name => victim.faction
+        raise ValidationError.new(source), "No ship called '#{victim.ship}' exists" unless Item.exists? :name => victim.ship
+        
+        
         kill.involved_parties = []
         
         involved_parties = source[/Involved parties:\n\n(((.+\n){8}\n|(.+\n){2}\n)*)/, 1] or raise ValidationError.new(source), "Involved parties malformed"
@@ -50,43 +57,48 @@ module Adam
           
           case lines
             
-            when 8
-              kill.involved_parties << Adam::Kill::InvolvedParty.new do |ip|
-                ip.type                   = "PC"
-                ip.pilot                  = snippet[/Name: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} pilot malformed"
-                ip.security_status        = snippet[/Security: ([\-\.0-9]+)/, 1].to_f or raise ValidationError.new(source), "Involved party #{i+1} security malformed"
-                ip.corporation            = snippet[/Corp: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} corporation malformed"
-                ip.alliance               = snippet[/Alliance: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} alliance malformed"
-                ip.faction                = snippet[/Faction: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} faction malformed"
-                ip.ship                   = snippet[/Ship: (.+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} ship malformed"
-                ip.weapon                 = snippet[/Weapon: (.+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} weapon malformed"
-                ip.damage_done            = (snippet[/Damage Done: ([0-9]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} damage malformed").to_i
-                ip.final_blow             = snippet =~ /\(laid the final blow\)/ ? true : false
-                
-                # Convert alliance/faction from "unknown" or "none" to false
-                ip.alliance = false if ip.alliance =~ /unknown|none/i
-                ip.faction = false if ip.faction =~ /unknown|none/i
+          when 8
+            involved_party = Adam::Kill::InvolvedParty.new do |ip|
+              ip.type                   = "PC"
+              ip.pilot                  = snippet[/Name: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} pilot malformed"
+              ip.security_status        = snippet[/Security: ([\-\.0-9]+)/, 1].to_f or raise ValidationError.new(source), "Involved party #{i+1} security malformed"
+              ip.corporation            = snippet[/Corp: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} corporation malformed"
+              ip.alliance               = snippet[/Alliance: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} alliance malformed"
+              ip.faction                = snippet[/Faction: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} faction malformed"
+              ip.ship                   = snippet[/Ship: (.+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} ship malformed"
+              ip.weapon                 = snippet[/Weapon: (.+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} weapon malformed"
+              ip.damage_done            = (snippet[/Damage Done: ([0-9]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} damage malformed").to_i
+              ip.final_blow             = snippet =~ /\(laid the final blow\)/ ? true : false
+              
+              # Convert alliance/faction from "unknown" or "none" to false
+              ip.alliance = false if ip.alliance =~ /unknown|none/i
+              ip.faction = false if ip.faction =~ /unknown|none/i
+            end
+              
+          when 2
+            involved_party = Adam::Kill::InvolvedParty.new do |ip|
+              ip.type                   = "NPC"
+              ip.ship                   = snippet[/Name: ([^\/]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} ship malformed"
+              ip.damage_done            = (snippet[/Damage Done: ([0-9]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} damage malformed").to_i
+              ip.final_blow             = snippet =~ /\(laid the final blow\)/ ? true : false
+              
+              # Determine whether allegiance is a faction or a corporation
+              allegiance = snippet[/Name: [^\/]+ \/ ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} allegiance malformed"
+              if allegiance =~ /^(Caldari State|Minmatar Republic|Amarr Empire|Gallente Federation|Jove Empire|CONCORD Assembly|Ammatar Mandate|Khanid Kingdom|The Syndicate|Guristas Pirates|Angel Cartel|The Blood Raider Covenant|The InterBus|ORE|Thukker Tribe|The Servant Sisters of EVE|The Society|Mordu's Legion Command|Sansha's Nation|Serpentis)$/
+                ip.faction = allegiance
+              elsif allegiance == 'Unknown'
+                ip.corporation = false
+              else
+                ip.corporation = allegiance
               end
-                
-            when 2
-              kill.involved_parties << Adam::Kill::InvolvedParty.new do |ip|
-                ip.type                   = "NPC"
-                ip.ship                   = snippet[/Name: ([^\/]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} ship malformed"
-                ip.damage_done            = (snippet[/Damage Done: ([0-9]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} damage malformed").to_i
-                ip.final_blow             = snippet =~ /\(laid the final blow\)/ ? true : false
-                
-                # Determine whether allegiance is a faction or a corporation
-                allegiance = snippet[/Name: [^\/]+ \/ ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} allegiance malformed"
-                if allegiance =~ /^(Caldari State|Minmatar Republic|Amarr Empire|Gallente Federation|Jove Empire|CONCORD Assembly|Ammatar Mandate|Khanid Kingdom|The Syndicate|Guristas Pirates|Angel Cartel|The Blood Raider Covenant|The InterBus|ORE|Thukker Tribe|The Servant Sisters of EVE|The Society|Mordu's Legion Command|Sansha's Nation|Serpentis)$/
-                  ip.faction = allegiance
-                elsif allegiance == 'Unknown'
-                  ip.corporation = false
-                else
-                  ip.corporation = allegiance
-                end
-              end
+            end
               
           end
+          
+          raise ValidationError.new(source), "No faction called '#{involved_party.faction}' exists" if involved_party.faction and !Faction.exists? :name => involved_party.faction
+          raise ValidationError.new(source), "No ship called '#{involved_party.ship}' exists" unless Item.exists? :name => involved_party.ship
+          
+          kill.involved_parties << involved_party
           
         end
         
