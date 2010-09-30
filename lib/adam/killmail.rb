@@ -10,7 +10,8 @@ module Adam
     extend self
     
     def parse(source)
-
+      raise ValidationError.new(source), "Killmail is empty" if source.empty?
+      
       # Normalize line endings
       source.encode! :universal_newline => true
 
