@@ -1,5 +1,5 @@
 require 'adam/killmail/validation_error'
-require 'models' unless defined?(SolarSystem) and defined?(Item) and defined?(Faction)
+#require 'models' unless defined?(SolarSystem) and defined?(Item) and defined?(Faction)
 
 require 'time'
 
@@ -44,8 +44,8 @@ module Adam
           v.faction = false if v.faction =~ /unknown|none/i
         end
         
-        raise ValidationError.new(source), "No faction called '#{victim.faction}' exists" if victim.faction and !Faction.exists? :name => victim.faction
-        raise ValidationError.new(source), "No ship called '#{victim.ship}' exists" unless Item.exists? :name => victim.ship
+        raise ValidationError.new(source), "No faction called '#{kill.victim.faction}' exists" if kill.victim.faction and !Faction.exists? :name => kill.victim.faction
+        raise ValidationError.new(source), "No ship called '#{kill.victim.ship}' exists" unless Item.exists? :name => kill.victim.ship
         
         
         kill.involved_parties = []
