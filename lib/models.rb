@@ -5,3 +5,4 @@ ActiveRecord::Base.establish_connection(database_configuration)
 
 class Item < ActiveRecord::Base; end
 class SolarSystem < ActiveRecord::Base; end
+class Faction < ActiveRecord::Base; end
