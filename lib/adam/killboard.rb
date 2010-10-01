@@ -15,7 +15,7 @@ module Adam
       @uri, @feed_uri = options[:uri], options[:feed_uri]
     end
     
-    # Loads an array of killmails from an EDK-compatible feed.
+    # Parses an EDK-compatible feed and returns an array of killmail strings.
     #
     # +options+ is a hash with these keys:
     # * +week+ - An integer determining which week to import. Defaults to current week.

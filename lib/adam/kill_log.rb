@@ -9,7 +9,11 @@ module Adam
   module KillLog
    
     extend self
-   
+    
+    # Parses a kill log and returns an array of Kill objects.
+    #
+    # Parameters:
+    # * +source+ - A kill log as returned by the EVE Online API.
     def parse(source)
       document = Hpricot.XML(source)
 
@@ -27,6 +31,10 @@ module Adam
 
     private
     
+    # Parses a single element of a kill log.
+    #
+    # Parameters:
+    # * +kill_element+ - A single kill element.
     def parse_single(kill_element)
       
       Adam::Kill.new do |k|

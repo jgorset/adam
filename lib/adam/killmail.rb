@@ -9,6 +9,10 @@ module Adam
     
     extend self
     
+    # Parses killmails and populates corresponding Kill objects.
+    #
+    # Parameters:
+    # * +source+ - A string containing the killmail to parse.
     def parse(source)
       raise ValidationError.new(source), "Killmail is empty" if source.empty?
       

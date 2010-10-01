@@ -2,6 +2,16 @@ require 'digest'
 
 module Adam
   
+  # Instances of the Kill class represent a kill in the EVE Online universe.
+  #
+  # Accessors:
+  # * +eve_id+ - The EVE ID of the killmail. This is only populated if the kill was derived from a kill log.
+  # * +time+ - A time object set to the time of the kill.
+  # * +solar_system+ - A solar system object (see the SolarSystem class).
+  # * +victim+ - A victim object (see the Victim class).
+  # * +solar_system+ - A solar system object (see the SolarSystem class).
+  # * +involved_parties+ - An array of involved party objects (see the InvolvedParty class).
+  # * +loot+ - An array of loot objects (see the Loot class).
   class Kill
     attr_accessor :eve_id, :time, :solar_system, :victim, :involved_parties, :loot
     
@@ -9,6 +19,8 @@ module Adam
       yield self if block_given?
     end
     
+    # Reverse-engineer the killmail. This is particularly useful if it
+    # was originally derived from a kill log.
     def to_killmail
 
       killmail = ""
@@ -91,6 +103,7 @@ module Adam
     
     alias_method :to_s, :to_killmail
     
+    # Calculates the message digest of the killmail.
     def digest
       string = time.to_s + victim.pilot.to_s + victim.ship.to_s + solar_system.to_s + victim.damage_taken.to_s
       involved_parties.sort! { |x, y| x.damage_done <=> y.damage_done }
@@ -100,33 +113,65 @@ module Adam
     
   end
   
+  # Instances of the SolarSystem class represent a solar system in the EVE universe.
+  #
+  # Accessors:
+  # * +name+ - A string describing the name of the solar system.
+  # * +security_status+ - A floating-point number describing the security status of the solar system.
   class Kill::SolarSystem
     attr_accessor :name, :security_status
     
     def initialize
       yield self if block_given?
     end
-    
   end
   
+  # Instances of the Kill class represent a victim of a kill.
+  #
+  # Accessors:
+  # * +pilot+ - A string describing the name of the pilot.
+  # * +corporation+ - A string describing the name of the corporation the pilot is enrolled in.
+  # * +alliance+ - A string describing the name of the alliance the corporation is a member of. May be +false+ if the corporation is not in an alliance.
+  # * +faction+ - A string describing the name of the faction the pilot is involved in. May be +false+ if the pilot is not in a faction.
+  # * +ship+ - A string describing the name of the ship that was destroyed.
+  # * +damage_taken+ - An integer describing damage taken.
   class Kill::Victim
     attr_accessor :pilot, :corporation, :alliance, :faction, :ship, :damage_taken
     
     def initialize
       yield self if block_given?
     end
-
   end
   
+  # Instances of the InvolvedParty class represent an involved party in a kill.
+  #
+  # Accessors:
+  # * +type+ - A symbol describing whether the pilot was player-controlled (:PC) or non-player controlled (:NPC).
+  # * +pilot+ - A string describing the name of the pilot. For NPCs, this is +nil+.
+  # * +security_status+ - A floating-point number describing the security status of the pilot. For NPCs, this is +nil+.
+  # * +corporation+ - A string describing the name of the corporation the pilot is enrolled in. For NPCs, this may be nil.
+  # * +alliance+ - A string describing the name of the alliance the corporation is a member of. May be +nil+ if the corporation is not in an alliance.
+  # * +faction+ - A string describing the name of the faction the pilot is involved in. May be +nil+ if the pilot is not in a faction.
+  # * +ship+ - A string describing the name of the ship that the pilot was flying.
+  # * +weapon+ - A string describing the name of the weapon that was last fired by this pilot.
+  # * +damage_done+ - An integer describing damage done by this pilot.
+  # * +final_blow+ - A boolean describing whether or not this pilot made the final blow.
   class Kill::InvolvedParty
     attr_accessor :type, :pilot, :security_status, :corporation, :alliance, :faction, :ship, :weapon, :damage_done, :final_blow
     
     def initialize
       yield self if block_given?
     end
-    
   end
   
+  # Instances of the Loot class represent a piece of loot of a kill.
+  #
+  # Accessors:
+  # * +name+ - A string describing the name of the item.
+  # * +quantity+ - An integer describing the quantity of the item.
+  # * +cargo+ - A boolean describing whether or not this item was in the cargo hold.
+  # * +drone_bay+ - A boolean describing whether or not this item was in the drone bay.
+  # * +dropped+ - A boolean describing whether or not this item was dropped.
   class Kill::Loot
     attr_accessor :name, :quantity, :cargo, :drone_bay, :dropped
     
