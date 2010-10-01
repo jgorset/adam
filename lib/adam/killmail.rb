@@ -64,7 +64,7 @@ module Adam
             
           when 8
             involved_party = Adam::Kill::InvolvedParty.new do |ip|
-              ip.type                   = "PC"
+              ip.type                   = :PC
               ip.pilot                  = snippet[/Name: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} pilot malformed"
               ip.security_status        = snippet[/Security: ([\-\.0-9]+)/, 1].to_f or raise ValidationError.new(source), "Involved party #{i+1} security malformed"
               ip.corporation            = snippet[/Corp: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} corporation malformed"
@@ -82,7 +82,7 @@ module Adam
               
           when 2
             involved_party = Adam::Kill::InvolvedParty.new do |ip|
-              ip.type                   = "NPC"
+              ip.type                   = :NPC
               ip.ship                   = snippet[/Name: ([^\/]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} ship malformed"
               ip.damage_done            = (snippet[/Damage Done: ([0-9]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} damage malformed").to_i
               ip.final_blow             = snippet =~ /\(laid the final blow\)/ ? true : false

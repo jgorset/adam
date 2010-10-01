@@ -70,7 +70,7 @@ module Adam
             raise ValidationError, "Involved party corporation no longer exists" if involved_party_element['corporationName'].empty?
             raise ValidationError, "Involved party alliance no longer exists" if involved_party_element['allianceName'].empty?
             
-            ip.type             = involved_party_element['characterName'].empty? ? 'NPC' : 'PC'
+            ip.type             = involved_party_element['characterName'].empty? ? :NPC : :PC
             ip.pilot            = involved_party_element['characterName'] unless involved_party_element['characterName'].empty?
             ip.corporation      = involved_party_element['corporationName']
             ip.alliance         = involved_party_element['allianceName'] == '' ? nil : involved_party_element['allianceName']
