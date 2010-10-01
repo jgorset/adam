@@ -8,9 +8,9 @@ Adam is a library for all things [EVE](http://www.eveonline.com/).
 
 ## Features
 
-* Killmail parser
-* Kill log parser
-* EDK-compatible killboard importer
+* Parses killmails
+* Parses kill logs
+* Imports killmails from EDK-compatible feeds
 
 ## Synopsis
 

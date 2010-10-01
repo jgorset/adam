@@ -105,9 +105,9 @@ module Adam
     
     # Calculates the message digest of the killmail.
     def digest
-      string = time.to_s + victim.pilot.to_s + victim.ship.to_s + solar_system.to_s + victim.damage_taken.to_s
+      string = "#{time}#{victim.pilot}#{victim.ship}#{solar_system.name}#{victim.damage_taken}"
       involved_parties.sort! { |x, y| x.damage_done <=> y.damage_done }
-      involved_parties.each { |p| string += p.pilot.to_s + p.damage_done.to_s }
+      involved_parties.each { |p| string << "#{p.pilot}#{p.damage_done}" }
       Digest::MD5.hexdigest(string)
     end
     

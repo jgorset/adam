@@ -1,0 +1,20 @@
+$: << File.expand_path(File.dirname(__FILE__) + '/../../lib/') unless $:.include? File.expand_path(File.dirname(__FILE__) + '/../../lib/')
+
+require 'test/unit'
+require 'adam'
+
+class KillTest < Test::Unit::TestCase
+  def test_digest_is_correct
+    assert_equal "6feb01bf9db0813bb7031f93365f853a", Adam::Killmail.parse(load_killmail('valid_killmail.txt')).digest
+  end
+  
+  def test_digest_does_not_change
+    assert_equal Adam::Killmail.parse(load_killmail('valid_killmail.txt')).digest, Adam::Killmail.parse(load_killmail('valid_killmail.txt')).digest
+  end
+  
+  private
+  
+  def load_killmail(filename)
+    File.read(File.dirname(__FILE__) + "/../fixtures/killmails/#{filename}")
+  end
+end
