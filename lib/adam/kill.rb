@@ -159,6 +159,14 @@ module Adam
   class Kill::InvolvedParty
     attr_accessor :type, :pilot, :security_status, :corporation, :alliance, :faction, :ship, :weapon, :damage_done, :final_blow
     
+    def pc?
+      type == :PC
+    end
+    
+    def npc?
+      type == :NPC
+    end
+    
     def initialize
       yield self if block_given?
     end
@@ -174,6 +182,14 @@ module Adam
   # * +dropped+ - A boolean describing whether or not this item was dropped.
   class Kill::Loot
     attr_accessor :name, :quantity, :cargo, :drone_bay, :dropped
+    
+    def cargo?
+      cargo
+    end
+    
+    def dropped?
+      dropped
+    end
     
     def initialize
       yield self if block_given?
