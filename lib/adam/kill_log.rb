@@ -56,8 +56,8 @@ module Adam
           
           v.pilot         = victim_element['characterName']
           v.corporation   = victim_element['corporatioNname']
-          v.alliance      = victim_element['allianceName'] == '' ? false : victim_element['allianceName']
-          v.faction       = victim_element['factionName'] == '' ? false: victim_element['factionName']
+          v.alliance      = victim_element['allianceName'] == '' ? nil : victim_element['allianceName']
+          v.faction       = victim_element['factionName'] == '' ? nil: victim_element['factionName']
           v.ship          = Item.find(victim_element['shipTypeID']).name
           v.damage_taken  = victim_element['damageTaken'].to_i
         end
@@ -73,8 +73,8 @@ module Adam
             ip.type             = involved_party_element['characterName'].empty? ? 'NPC' : 'PC'
             ip.pilot            = involved_party_element['characterName'] unless involved_party_element['characterName'].empty?
             ip.corporation      = involved_party_element['corporationName']
-            ip.alliance         = involved_party_element['allianceName'] == '' ? false : involved_party_element['allianceName']
-            ip.faction          = involved_party_element['factionName'] == '' ? false : involved_party_element['factionName']
+            ip.alliance         = involved_party_element['allianceName'] == '' ? nil : involved_party_element['allianceName']
+            ip.faction          = involved_party_element['factionName'] == '' ? nil : involved_party_element['factionName']
             ip.security_status  = involved_party_element['securityStatus'].to_f
             ip.ship             = Item.find(involved_party_element['shipTypeID']).name
             ip.weapon           = Item.find(involved_party_element['weaponTypeID']).name

@@ -44,9 +44,9 @@ module Adam
           # Set pilot to nil if it's a moon
           v.pilot = nil if v.pilot =~ /[a-zA-Z0-9\- ]+ - Moon [0-9]+/
         
-          # Convert alliance/faction from "unknown" or "none" to false
-          v.alliance = false if v.alliance =~ /unknown|none/i
-          v.faction = false if v.faction =~ /unknown|none/i
+          # Convert alliance/faction from "unknown" or "none" to nil
+          v.alliance = nil if v.alliance =~ /unknown|none/i
+          v.faction = nil if v.faction =~ /unknown|none/i
         end
         
         raise ValidationError.new(source), "No faction called '#{kill.victim.faction}' exists" if kill.victim.faction and !Faction.exists? :name => kill.victim.faction
@@ -75,9 +75,9 @@ module Adam
               ip.damage_done            = (snippet[/Damage Done: ([0-9]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} damage malformed").to_i
               ip.final_blow             = snippet =~ /\(laid the final blow\)/ ? true : false
               
-              # Convert alliance/faction from "unknown" or "none" to false
-              ip.alliance = false if ip.alliance =~ /unknown|none/i
-              ip.faction = false if ip.faction =~ /unknown|none/i
+              # Convert alliance/faction from "unknown" or "none" to nil
+              ip.alliance = nil if ip.alliance =~ /unknown|none/i
+              ip.faction = nil if ip.faction =~ /unknown|none/i
             end
               
           when 2

@@ -29,9 +29,9 @@ module Adam
       killmail << "Victim: #{victim.pilot}\n"
       killmail << "Corp: #{victim.corporation}\n"
       killmail << "Alliance: #{victim.alliance}\n" if victim.alliance
-      killmail << "Alliance: Unknown\n" unless victim.alliance
+      killmail << "Alliance: Unknown\n" if victim.alliance.nil?
       killmail << "Faction: #{victim.faction}\n" if victim.faction
-      killmail << "Faction: NONE\n" unless victim.faction
+      killmail << "Faction: NONE\n" if victim.faction.nil?
       killmail << "Destroyed: #{victim.ship}\n"
       killmail << "System: #{solar_system.name}\n"
       killmail << "Security: #{solar_system.security_status.round(2)}\n"
@@ -50,9 +50,9 @@ module Adam
             killmail << "Security: #{involved_party.security_status.round(2)}\n"
             killmail << "Corp: #{involved_party.corporation}\n"
             killmail << "Alliance: #{involved_party.alliance}\n" if involved_party.alliance
-            killmail << "Alliance: NONE\n" unless involved_party.alliance
+            killmail << "Alliance: NONE\n" if involved_party.alliance.nil?
             killmail << "Faction: #{involved_party.faction}\n" if involved_party.faction
-            killmail << "Faction: NONE\n" unless involved_party.faction
+            killmail << "Faction: NONE\n" if involved_party.faction.nil?
             killmail << "Ship: #{involved_party.ship}\n"
             killmail << "Weapon: #{involved_party.weapon}\n"
             killmail << "Damage Done: #{involved_party.damage_done}\n"
@@ -131,8 +131,8 @@ module Adam
   # Accessors:
   # * +pilot+ - A string describing the name of the pilot.
   # * +corporation+ - A string describing the name of the corporation the pilot is enrolled in.
-  # * +alliance+ - A string describing the name of the alliance the corporation is a member of. May be +false+ if the corporation is not in an alliance.
-  # * +faction+ - A string describing the name of the faction the pilot is involved in. May be +false+ if the pilot is not in a faction.
+  # * +alliance+ - A string describing the name of the alliance the corporation is a member of. May be +nil+ if the corporation is not in an alliance.
+  # * +faction+ - A string describing the name of the faction the pilot is involved in. May be +nil+ if the pilot is not in a faction.
   # * +ship+ - A string describing the name of the ship that was destroyed.
   # * +damage_taken+ - An integer describing damage taken.
   class Kill::Victim
