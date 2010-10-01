@@ -114,11 +114,11 @@ module Adam
             loot = Adam::Kill::Loot.new do |l|
               l.name       = snippet[/([^,\(\)]+)/, 1] or raise ValidationError.new(source), "Destroyed item #{i+1} name malformed"
               l.quantity   = snippet =~ /Qty: ([0-9]+)/ ? snippet[/Qty: ([0-9]+)/, 1].to_i : 1
-              l.cargo      = snippet[/(Cargo)/] ? true : false
+              l.cargo_hold = snippet[/(Cargo)/] ? true : false
               l.drone_bay  = snippet[/(Drone Bay)/] ? true : false
               l.dropped    = false
             end
-            existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.cargo.eql?(loot.cargo) and el.drone_bay.eql?(loot.drone_bay) and el.dropped.eql?(loot.dropped) }[0]
+            existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.cargo_hold.eql?(loot.cargo_hold) and el.drone_bay.eql?(loot.drone_bay) and el.dropped.eql?(loot.dropped) }[0]
             existing_loot ? existing_loot.quantity += loot.quantity : kill.loot << loot
           end
         end
@@ -128,11 +128,11 @@ module Adam
             loot = Adam::Kill::Loot.new do |l|
               l.name       = snippet[/([^,\(\)]+)/, 1] or raise ValidationError.new(source), "Dropped item #{i+1} name malformed"
               l.quantity   = snippet =~ /Qty: ([0-9]+)/ ? snippet[/Qty: ([0-9]+)/, 1].to_i : 1
-              l.cargo      = snippet[/(Cargo)/] ? true : false
+              l.cargo_hold = snippet[/(Cargo)/] ? true : false
               l.drone_bay  = snippet[/(Drone Bay)/] ? true : false
               l.dropped    = true
             end
-            existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.cargo.eql?(loot.cargo) and el.drone_bay.eql?(loot.drone_bay) and el.dropped.eql?(loot.dropped) }[0]
+            existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.cargo_hold.eql?(loot.cargo_hold) and el.drone_bay.eql?(loot.drone_bay) and el.dropped.eql?(loot.dropped) }[0]
             existing_loot ? existing_loot.quantity += loot.quantity : kill.loot << loot
           end
         end
