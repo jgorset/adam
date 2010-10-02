@@ -1,5 +1,8 @@
 require 'adam/killmail/validation_error'
-require 'models' unless defined?(SolarSystem) and defined?(Item) and defined?(Faction)
+
+SolarSystem rescue require 'models/solar_system'
+Item rescue require 'models/item'
+Faction rescue require 'models/faction'
 
 require 'time'
 

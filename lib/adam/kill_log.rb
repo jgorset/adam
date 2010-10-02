@@ -1,5 +1,8 @@
 require 'adam/kill_log/validation_error'
-require 'models' unless defined?(SolarSystem) and defined?(Item)
+
+SolarSystem rescue require 'models/solar_system'
+Item rescue require 'models/item'
+Faction rescue require 'models/faction'
 
 require 'hpricot'
 require 'time'
