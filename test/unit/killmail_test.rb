@@ -48,7 +48,7 @@ class KillmailTest < Test::Unit::TestCase
     assert_equal "Antimatter Charge L", kill.loot[11].name
     assert_equal false, kill.loot[11].dropped
     assert_equal 4322, kill.loot[11].quantity
-    assert_equal true, kill.loot[11].cargo_hold
+    assert_equal true, kill.loot[11].cargo
   end
   
   private

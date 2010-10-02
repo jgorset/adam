@@ -78,7 +78,7 @@ module Adam
         destroyed_items.each do |loot|
           killmail << "#{loot.name}"
           killmail << ", Qty: #{loot.quantity}" if loot.quantity > 1
-          killmail << " (Cargo)" if loot.cargo_hold
+          killmail << " (Cargo)" if loot.cargo
           killmail << " (Drone Bay)" if loot.drone_bay
           killmail << "\n"
         end
@@ -92,7 +92,7 @@ module Adam
         dropped_items.each do |loot|
           killmail << "#{loot.name}"
           killmail << ", Qty: #{loot.quantity}" if loot.quantity > 1
-          killmail << " (Cargo)" if loot.cargo_hold
+          killmail << " (Cargo)" if loot.cargo
           killmail << " (Drone Bay)" if loot.drone_bay
           killmail << "\n"
         end
@@ -177,14 +177,14 @@ module Adam
   # Accessors:
   # * +name+ - A string describing the name of the item.
   # * +quantity+ - An integer describing the quantity of the item.
-  # * +cargo_hold+ - A boolean describing whether or not this item was in the cargo hold.
+  # * +cargo+ - A boolean describing whether or not this item was in the cargo hold.
   # * +drone_bay+ - A boolean describing whether or not this item was in the drone bay.
   # * +dropped+ - A boolean describing whether or not this item was dropped.
   class Kill::Loot
-    attr_accessor :name, :quantity, :cargo_hold, :drone_bay, :dropped
+    attr_accessor :name, :quantity, :cargo, :drone_bay, :dropped
     
-    def cargo_hold?
-      cargo_hold
+    def cargo?
+      cargo
     end
     
     def dropped?
