@@ -39,31 +39,29 @@ module Adam
       killmail << "\n"
       killmail << "Involved parties:\n"
       killmail << "\n"
-
+      
       involved_parties.each do |involved_party|
         
-        case involved_party.type
-          
-          when "PC"
-            killmail << "Name: #{involved_party.pilot} (laid the final blow)\n" if involved_party.final_blow
-            killmail << "Name: #{involved_party.pilot}\n" unless involved_party.final_blow
-            killmail << "Security: #{involved_party.security_status.round(2)}\n"
-            killmail << "Corp: #{involved_party.corporation}\n"
-            killmail << "Alliance: #{involved_party.alliance}\n" if involved_party.alliance
-            killmail << "Alliance: NONE\n" if involved_party.alliance.nil?
-            killmail << "Faction: #{involved_party.faction}\n" if involved_party.faction
-            killmail << "Faction: NONE\n" if involved_party.faction.nil?
-            killmail << "Ship: #{involved_party.ship}\n"
-            killmail << "Weapon: #{involved_party.weapon}\n"
-            killmail << "Damage Done: #{involved_party.damage_done}\n"
-            killmail << "\n"
+        if involved_party.pc?
+          killmail << "Name: #{involved_party.pilot} (laid the final blow)\n" if involved_party.final_blow
+          killmail << "Name: #{involved_party.pilot}\n" unless involved_party.final_blow
+          killmail << "Security: #{involved_party.security_status.round(2)}\n"
+          killmail << "Corp: #{involved_party.corporation}\n"
+          killmail << "Alliance: #{involved_party.alliance}\n" if involved_party.alliance
+          killmail << "Alliance: NONE\n" if involved_party.alliance.nil?
+          killmail << "Faction: #{involved_party.faction}\n" if involved_party.faction
+          killmail << "Faction: NONE\n" if involved_party.faction.nil?
+          killmail << "Ship: #{involved_party.ship}\n"
+          killmail << "Weapon: #{involved_party.weapon}\n"
+          killmail << "Damage Done: #{involved_party.damage_done}\n"
+          killmail << "\n"
+        end
             
-          when "NPC"
-            killmail << "Name: #{involved_party.ship} / #{involved_party.corporation or involved_party.faction} (laid the final blow)\n" if involved_party.final_blow
-            killmail << "Name: #{involved_party.ship} / #{involved_party.corporation or involved_party.faction}\n" unless involved_party.final_blow
-            killmail << "Damage Done: #{involved_party.damage_done}\n"
-            killmail << "\n"
-            
+        if involved_party.npc?
+          killmail << "Name: #{involved_party.ship} / #{involved_party.corporation or involved_party.faction} (laid the final blow)\n" if involved_party.final_blow
+          killmail << "Name: #{involved_party.ship} / #{involved_party.corporation or involved_party.faction}\n" unless involved_party.final_blow
+          killmail << "Damage Done: #{involved_party.damage_done}\n"
+          killmail << "\n" 
         end
         
       end
