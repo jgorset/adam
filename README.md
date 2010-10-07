@@ -48,14 +48,36 @@ Adam is a library for all things [EVE](http://www.eveonline.com/).
 
 * Ruby 1.9
 * Hpricot
-* ActiveRecord (see note)
-* MySQL (see note)
-
-Note: ActiveRecord and MySQL are only required if you don't want to roll your own implementation for the "SolarSystem", "Item" and "Faction" classes.
+* ActiveRecord
 
 ## Install
 
-    gem install adam
+Adam can be installed as a Ruby gem or a Ruby on Rails plugin:
+
+    # Install as a gem
+    $ gem install adam
+    
+    # Install as a Ruby on Rails plugin
+    $ rails plugin install git://github.com/jgorset/adam.git
+    
+Adam defines ActiveRecord models for `Item`, `SolarSystem` and `Faction` if your application hasn't already done so, but you'll need to
+populate database tables for each model:
+
+    $ mysql adam < db/factions.sql
+    $ mysql adam < db/solar_systems.sql
+    $ mysql adam < db/items.sql
+    
+Finally, you'll need to configure Adam so it can connect to your database:
+
+    Adam::configure do |c|
+      c.database.adapter = 'mysql2'
+      c.database.username = 'username'
+      c.database.password = 'password'
+      c.database.name = 'database'
+      c.database.host = 'localhost'
+    end
+    
+That's it, you're done.
 
 ## License
 
