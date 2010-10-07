@@ -66,8 +66,6 @@ module Adam
         
       end
 
-      killmail << "\n"
-
       destroyed_items = loot.select { |l| l.dropped == false }
       unless destroyed_items.empty?
         killmail << "\n"
