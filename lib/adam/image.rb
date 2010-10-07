@@ -70,8 +70,10 @@ module Adam
           response, body = http.get("#{uri.path}?#{uri.query}")
         rescue Timeout::Error
           tries += 1
-          sleep 5
-          retry if tries < 3
+          if tries < 3
+            sleep 5
+            retry
+          end
         end
       end
       
