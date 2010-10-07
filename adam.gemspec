@@ -10,5 +10,5 @@ Gem::Specification.new do |s|
   s.email         = "jgorset@gmail.com"
   s.homepage      = "http://github.com/frkt/adam"
   s.summary       = "Adam is a library for all things EVE"
-  s.files         = Dir.glob("{config,db,lib}/**/*") + %w(README.md)
+  s.files         = Dir.glob("{lib}/**/*") + %w(README.md)
 end
