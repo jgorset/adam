@@ -1,8 +1,13 @@
 require 'active_record'
 
 unless ActiveRecord::Base.connected?
-  database_configuration = YAML::load_file(File.dirname(__FILE__) + '/../../config/database.yml')
-  ActiveRecord::Base.establish_connection YAML::load_file(File.dirname(__FILE__) + '/../../config/database.yml')
+  ActiveRecord::Base.establish_connection(
+    :adapter => Adam::CONFIGURATION.database.adapter,
+    :username => Adam::CONFIGURATION.database.username,
+    :password => Adam::CONFIGURATION.database.password,
+    :database => Adam::CONFIGURATION.database.name,
+    :host => Adam::CONFIGURATION.database.host
+  )
 end
 
 class Item < ActiveRecord::Base; end
