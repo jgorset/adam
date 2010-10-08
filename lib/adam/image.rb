@@ -63,21 +63,22 @@ module Adam
     def self.request(uri)
       uri = URI.parse(uri)
       
-      response, body = nil, nil
-      Net::HTTP.new(uri.host, uri.port).start do |http|
-        tries = 0
-        begin
-          response, body = http.get("#{uri.path}?#{uri.query}")
-        rescue Timeout::Error
-          tries += 1
-          if tries < 3
-            sleep 5
-            retry
-          end
-        end
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.open_timeout = 3
+      http.read_timeout = 20
+      
+      request = Net::HTTP::Get.new(uri.path)
+      request['user-agent'] = "Adam #{Adam::VERSION}"
+      
+      tries = 0
+      begin
+        tries += 1
+        response = http.request(request)
+      rescue Timeout::Error
+        sleep 5 and retry if tries < 3
       end
       
-      body
+      response.body
     end
     
   end
