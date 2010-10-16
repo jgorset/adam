@@ -4,6 +4,16 @@ require 'test/unit'
 require 'adam'
 
 class KillmailTest < Test::Unit::TestCase
+  def setup
+    Adam::configure do |c|
+      c.database.adapter = 'mysql2'
+      c.database.username = 'username'
+      c.database.password = 'password'
+      c.database.name = 'database'
+      c.database.host = 'localhost'
+    end
+  end
+
   def test_parse_valid_killmail
     assert_instance_of Adam::Kill, Adam::Killmail.parse(load_killmail('valid_killmail.txt'))
   end

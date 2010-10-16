@@ -4,6 +4,16 @@ require 'test/unit'
 require 'adam'
 
 class KillLogTest < Test::Unit::TestCase
+  def setup
+    Adam::configure do |c|
+      c.database.adapter = 'mysql2'
+      c.database.username = 'username'
+      c.database.password = 'password'
+      c.database.name = 'database'
+      c.database.host = 'localhost'
+    end
+  end
+
   def test_parse_valid_kill_log
     assert_instance_of Array, Adam::KillLog.parse(load_kill_log('valid_kill_log.xml'))
   end
