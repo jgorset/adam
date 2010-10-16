@@ -12,6 +12,10 @@ class KillTest < Test::Unit::TestCase
     assert_equal Adam::Killmail.parse(load_killmail('valid_killmail.txt')).digest, Adam::Killmail.parse(load_killmail('valid_killmail.txt')).digest
   end
   
+  def test_reverse_engineers_correctly
+    assert_equal load_killmail('valid_killmail.txt'), Adam::Killmail.parse(load_killmail('valid_killmail.txt')).to_killmail
+  end
+  
   private
   
   def load_killmail(filename)
