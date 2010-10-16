@@ -69,7 +69,7 @@ module Adam
             involved_party = Adam::Kill::InvolvedParty.new do |ip|
               ip.type                   = :PC
               ip.pilot                  = snippet[/Name: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} pilot malformed"
-              ip.security_status        = snippet[/Security: ([\-\.0-9]+)/, 1].to_f or raise ValidationError.new(source), "Involved party #{i+1} security malformed"
+              ip.security_status        = (snippet[/Security: ([\-\.0-9]+)/, 1] or raise ValidationError.new(source), "Involved party #{i+1} security malformed").to_f
               ip.corporation            = snippet[/Corp: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} corporation malformed"
               ip.alliance               = snippet[/Alliance: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} alliance malformed"
               ip.faction                = snippet[/Faction: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Involved party #{i+1} faction malformed"
