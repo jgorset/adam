@@ -24,7 +24,7 @@ module Adam
     def to_killmail
 
       killmail = ""
-      killmail << time.strftime("%Y.%m.%d %H:%M")
+      killmail << time.strftime("%Y.%m.%d %H:%M\n")
       killmail << "\n"
       killmail << "Victim: #{victim.pilot}\n"
       killmail << "Corp: #{victim.corporation}\n"
