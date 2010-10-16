@@ -33,7 +33,7 @@ Weapon: Shrapnel Bomb
 Damage Done: 3706
 
 Name: Ulic Vos
-Security: -2
+Security: -2.0
 Corp: Invicta.
 Alliance: Cry Havoc.
 Faction: NONE
