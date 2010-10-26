@@ -1,6 +1,6 @@
-module Adam
-  VERSION = '1.5.1'
-  
+require 'adam/version'
+
+module Adam  
   autoload :Killmail, 'adam/killmail'
   autoload :KillLog, 'adam/kill_log'
   autoload :Kill, 'adam/kill'
