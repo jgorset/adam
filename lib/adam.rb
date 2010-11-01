@@ -5,6 +5,7 @@ module Adam
   autoload :KillLog, 'adam/kill_log'
   autoload :Kill, 'adam/kill'
   autoload :Killboard, 'adam/killboard'
+  autoload :API, 'adam/api'
   autoload :Image, 'adam/image'
   autoload :Configuration, 'adam/configuration'
   
