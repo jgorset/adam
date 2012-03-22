@@ -76,6 +76,7 @@ module Adam
           killmail << ", Qty: #{loot.quantity}" if loot.quantity > 1
           killmail << " (Cargo)" if loot.cargo
           killmail << " (Drone Bay)" if loot.drone_bay
+          killmail << " (Implant)" if loot.implant
           killmail << "\n"
         end
       end
@@ -90,6 +91,7 @@ module Adam
           killmail << ", Qty: #{loot.quantity}" if loot.quantity > 1
           killmail << " (Cargo)" if loot.cargo
           killmail << " (Drone Bay)" if loot.drone_bay
+          killmail << " (Implant)" if loot.implant
           killmail << "\n"
         end
       end
@@ -177,7 +179,7 @@ module Adam
   # * +drone_bay+ - A boolean describing whether or not this item was in the drone bay.
   # * +dropped+ - A boolean describing whether or not this item was dropped.
   class Kill::Loot
-    attr_accessor :name, :quantity, :cargo, :drone_bay, :dropped
+    attr_accessor :name, :quantity, :cargo, :drone_bay, :dropped, :implant
     
     def cargo?
       cargo

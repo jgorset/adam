@@ -115,10 +115,11 @@ module Adam
         if source =~ /Destroyed items:/
           source[/Destroyed items:\n\n(((.+)\n?)*)/, 1].split("\n").each_with_index do |snippet, i|
             loot = Adam::Kill::Loot.new do |l|
-              l.name       = snippet[/([^,\(\)]+[^,\(\) ]{1})/, 1] or raise ValidationError.new(source), "Destroyed item #{i+1} name malformed"
+              l.name       = snippet[/([^Q\(\)]+[^, Q\(\) ]{1})/, 1] or raise ValidationError.new(source), "Destroyed item #{i+1} name malformed"
               l.quantity   = snippet =~ /Qty: ([0-9]+)/ ? snippet[/Qty: ([0-9]+)/, 1].to_i : 1
               l.cargo = snippet[/(Cargo)/] ? true : false
               l.drone_bay  = snippet[/(Drone Bay)/] ? true : false
+              l.implant    = snippet[/(Implant)/] ? true : false
               l.dropped    = false
             end
             existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.cargo.eql?(loot.cargo) and el.drone_bay.eql?(loot.drone_bay) and el.dropped.eql?(loot.dropped) }[0]
@@ -133,6 +134,7 @@ module Adam
               l.quantity   = snippet =~ /Qty: ([0-9]+)/ ? snippet[/Qty: ([0-9]+)/, 1].to_i : 1
               l.cargo = snippet[/(Cargo)/] ? true : false
               l.drone_bay  = snippet[/(Drone Bay)/] ? true : false
+              l.implant    = snippet[/(Implant)/] ? true : false
               l.dropped    = true
             end
             existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.cargo.eql?(loot.cargo) and el.drone_bay.eql?(loot.drone_bay) and el.dropped.eql?(loot.dropped) }[0]

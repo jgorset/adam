@@ -3,3 +3,4 @@ test.rb
 pkg/*
 *.gem
 .bundle
+Gemfile.lock
