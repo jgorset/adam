@@ -10,7 +10,7 @@ module Adam
   
   CONFIGURATION = Configuration.new(
     database: {
-      adapter: 'pg',
+      adapter: 'postgresql',
       username: 'username',
       password: 'password',
       name: 'database',
