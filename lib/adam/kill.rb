@@ -26,15 +26,16 @@ module Adam
       killmail = ""
       killmail << time.strftime("%Y.%m.%d %H:%M\n")
       killmail << "\n"
-      killmail << "Victim: #{victim.pilot}\n"
+      killmail << "Victim: #{victim.pilot}\n" if victim.pilot
       killmail << "Corp: #{victim.corporation}\n"
       killmail << "Alliance: #{victim.alliance}\n" if victim.alliance
       killmail << "Alliance: Unknown\n" if victim.alliance.nil?
       killmail << "Faction: #{victim.faction}\n" if victim.faction
       killmail << "Faction: NONE\n" if victim.faction.nil?
       killmail << "Destroyed: #{victim.ship}\n"
+      killmail << "Moon: #{victim.moon}\n" if victim.moon
       killmail << "System: #{solar_system.name}\n"
-      killmail << "Security: #{solar_system.security_status.round(2)}\n"
+      killmail << "Security: #{solar_system.security_status.round(1)}\n"
       killmail << "Damage Taken: #{victim.damage_taken}\n"
       killmail << "\n"
       killmail << "Involved parties:\n"
