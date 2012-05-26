@@ -37,7 +37,11 @@ module Adam
         raise ValidationError.new(source), "No solar system called '#{kill.solar_system.name}' exists" unless SolarSystem.exists? :name => kill.solar_system.name
   
         kill.victim = Adam::Kill::Victim.new do |v|
-          v.pilot         = source[/Victim: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim pilot malformed"
+          if source =~ /Victim:/
+            v.pilot       = source[/Victim: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim pilot malformed"
+          elsif source =~ /Moon:/
+            v.moon        = source[/Moon: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim moon malformed"
+          end
           v.corporation   = source[/Corp: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim corporation malformed"
           v.alliance      = source[/Alliance: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim alliance malformed"
           v.faction       = source[/Faction: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim faction malformed"
@@ -54,7 +58,7 @@ module Adam
         
         raise ValidationError.new(source), "No faction called '#{kill.victim.faction}' exists" if kill.victim.faction and !Faction.exists? :name => kill.victim.faction
         raise ValidationError.new(source), "No ship called '#{kill.victim.ship}' exists" unless Item.exists? :name => kill.victim.ship
-        
+        raise ValidationError.new(source), "No moon called '#{kill.victim.moon}' exists" unless Moon.exists? :name => kill.victim.moon if kill.victim.moon
         
         kill.involved_parties = []
         

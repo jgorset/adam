@@ -134,7 +134,7 @@ module Adam
   # * +ship+ - A string describing the name of the ship that was destroyed.
   # * +damage_taken+ - An integer describing damage taken.
   class Kill::Victim
-    attr_accessor :pilot, :corporation, :alliance, :faction, :ship, :damage_taken
+    attr_accessor :pilot, :corporation, :alliance, :faction, :ship, :damage_taken, :moon
     
     def initialize
       yield self if block_given?
