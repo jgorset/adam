@@ -141,7 +141,7 @@ module Adam
               l.location   = :drone_bay if snippet[/(Drone Bay)/]
               l.location   = :implant   if snippet[/(Implant)/]
               l.location   = :copy      if snippet[/(Copy)/]
-              l.dropped    = false
+              l.dropped    = true
             end
             existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.location.eql?(loot.location) and el.dropped.eql?(loot.dropped) }[0]
             existing_loot ? existing_loot.quantity += loot.quantity : kill.loot << loot
