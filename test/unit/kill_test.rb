@@ -6,7 +6,7 @@ require 'adam'
 class KillTest < Test::Unit::TestCase
   def setup
     Adam::configure do |c|
-      c.database.adapter = 'mysql2'
+      c.database.adapter = 'postgresql'
       c.database.username = 'username'
       c.database.password = 'password'
       c.database.name = 'database'

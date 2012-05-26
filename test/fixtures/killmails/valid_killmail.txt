@@ -224,6 +224,7 @@ Hammerhead II, Qty: 5 (Drone Bay)
 Garde II, Qty: 2 (Drone Bay)
 Ocular Filter - Improved (Implant)
 Exotic Dancers, Female, Qty: 2 (Cargo)
+Maller Blueprint (Copy) (Cargo)
 
 Dropped items:
 
@@ -241,3 +242,4 @@ Hammerhead II, Qty: 5 (Drone Bay)
 Garde II, Qty: 3 (Drone Bay)
 Warrior II, Qty: 5 (Drone Bay)
 Warden II, Qty: 4 (Drone Bay)
+Maller Blueprint (Copy) (Cargo)

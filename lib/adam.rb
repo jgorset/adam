@@ -9,12 +9,12 @@ module Adam
   autoload :Configuration, 'adam/configuration'
   
   CONFIGURATION = Configuration.new(
-    :database => {
-      :adapter => 'mysql2',
-      :username => 'username',
-      :password => 'password',
-      :name => 'database',
-      :host => 'localhost'
+    database: {
+      adapter: 'pg',
+      username: 'username',
+      password: 'password',
+      name: 'database',
+      host: 'localhost'
     }
   )
   

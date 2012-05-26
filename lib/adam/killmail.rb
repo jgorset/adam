@@ -37,7 +37,11 @@ module Adam
         raise ValidationError.new(source), "No solar system called '#{kill.solar_system.name}' exists" unless SolarSystem.exists? :name => kill.solar_system.name
   
         kill.victim = Adam::Kill::Victim.new do |v|
-          v.pilot         = source[/Victim: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim pilot malformed"
+          if source =~ /Victim:/
+            v.pilot       = source[/Victim: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim pilot malformed"
+          elsif source =~ /Moon:/
+            v.moon        = source[/Moon: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim moon malformed"
+          end
           v.corporation   = source[/Corp: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim corporation malformed"
           v.alliance      = source[/Alliance: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim alliance malformed"
           v.faction       = source[/Faction: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})/, 1] or raise ValidationError.new(source), "Victim faction malformed"
@@ -54,7 +58,7 @@ module Adam
         
         raise ValidationError.new(source), "No faction called '#{kill.victim.faction}' exists" if kill.victim.faction and !Faction.exists? :name => kill.victim.faction
         raise ValidationError.new(source), "No ship called '#{kill.victim.ship}' exists" unless Item.exists? :name => kill.victim.ship
-        
+        raise ValidationError.new(source), "No moon called '#{kill.victim.moon}' exists" unless Moon.exists? :name => kill.victim.moon if kill.victim.moon
         
         kill.involved_parties = []
         
@@ -115,14 +119,15 @@ module Adam
         if source =~ /Destroyed items:/
           source[/Destroyed items:\n\n(((.+)\n?)*)/, 1].split("\n").each_with_index do |snippet, i|
             loot = Adam::Kill::Loot.new do |l|
-              l.name       = snippet[/([^Q\(\)]+[^, Q\(\) ]{1})/, 1] or raise ValidationError.new(source), "Destroyed item #{i+1} name malformed"
+              l.name       = snippet[/([^\(\)]+[^\s\(\)]{1})/, 1].gsub(/\b, Qty: \d+\b$/, "") or raise ValidationError.new(source), "Destroyed item #{i+1} name malformed"
               l.quantity   = snippet =~ /Qty: ([0-9]+)/ ? snippet[/Qty: ([0-9]+)/, 1].to_i : 1
-              l.cargo = snippet[/(Cargo)/] ? true : false
-              l.drone_bay  = snippet[/(Drone Bay)/] ? true : false
-              l.implant    = snippet[/(Implant)/] ? true : false
+              l.location   = :cargo_bay if snippet[/(Cargo)/]
+              l.location   = :drone_bay if snippet[/(Drone Bay)/]
+              l.location   = :implant   if snippet[/(Implant)/]
+              l.location   = :copy      if snippet[/(Copy)/]
               l.dropped    = false
             end
-            existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.cargo.eql?(loot.cargo) and el.drone_bay.eql?(loot.drone_bay) and el.dropped.eql?(loot.dropped) }[0]
+            existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.location.eql?(loot.location) and el.dropped.eql?(loot.dropped) }[0]
             existing_loot ? existing_loot.quantity += loot.quantity : kill.loot << loot
           end
         end
@@ -130,14 +135,15 @@ module Adam
         if source =~ /Dropped items:/
           source[/Dropped items:\n\n(((.+)\n?)*)/, 1].split("\n").each_with_index do |snippet, i|
             loot = Adam::Kill::Loot.new do |l|
-              l.name       = snippet[/([^,\(\)]+[^,\(\) ]{1})/, 1] or raise ValidationError.new(source), "Dropped item #{i+1} name malformed"
+              l.name       = snippet[/([^\(\)]+[^\s\(\)]{1})/, 1].gsub(/\b, Qty: \d+\b$/, "") or raise ValidationError.new(source), "Destroyed item #{i+1} name malformed"
               l.quantity   = snippet =~ /Qty: ([0-9]+)/ ? snippet[/Qty: ([0-9]+)/, 1].to_i : 1
-              l.cargo = snippet[/(Cargo)/] ? true : false
-              l.drone_bay  = snippet[/(Drone Bay)/] ? true : false
-              l.implant    = snippet[/(Implant)/] ? true : false
+              l.location   = :cargo_bay if snippet[/(Cargo)/]
+              l.location   = :drone_bay if snippet[/(Drone Bay)/]
+              l.location   = :implant   if snippet[/(Implant)/]
+              l.location   = :copy      if snippet[/(Copy)/]
               l.dropped    = true
             end
-            existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.cargo.eql?(loot.cargo) and el.drone_bay.eql?(loot.drone_bay) and el.dropped.eql?(loot.dropped) }[0]
+            existing_loot = kill.loot.select { |el| el.name.eql?(loot.name) and el.location.eql?(loot.location) and el.dropped.eql?(loot.dropped) }[0]
             existing_loot ? existing_loot.quantity += loot.quantity : kill.loot << loot
           end
         end

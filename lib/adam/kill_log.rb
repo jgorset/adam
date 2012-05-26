@@ -46,8 +46,8 @@ module Adam
         k.time     = Time.parse(kill_element['killTime']).utc
 
         k.solar_system = Adam::Kill::SolarSystem.new do |ss|
-          ss.name             = SolarSystem.find_by_id(kill_element['solarSystemID']).name
-          ss.security_status  = SolarSystem.find_by_id(kill_element['solarSystemID']).security_status
+          ss.name             = SolarSystem.find(kill_element['solarSystemID']).name
+          ss.security_status  = SolarSystem.find(kill_element['solarSystemID']).security_status
         end
     
         k.victim = Adam::Kill::Victim.new do |v|
@@ -61,7 +61,7 @@ module Adam
           v.corporation   = victim_element['corporatioNname']
           v.alliance      = victim_element['allianceName'] == '' ? nil : victim_element['allianceName']
           v.faction       = victim_element['factionName'] == '' ? nil: victim_element['factionName']
-          v.ship          = Item.find_by_id(victim_element['shipTypeID']).name
+          v.ship          = Item.find(victim_element['shipTypeID']).name
           v.damage_taken  = victim_element['damageTaken'].to_i
         end
 
@@ -79,8 +79,8 @@ module Adam
             ip.alliance         = involved_party_element['allianceName'] == '' ? nil : involved_party_element['allianceName']
             ip.faction          = involved_party_element['factionName'] == '' ? nil : involved_party_element['factionName']
             ip.security_status  = involved_party_element['securityStatus'].to_f
-            ip.ship             = Item.find_by_id(involved_party_element['shipTypeID']).name
-            ip.weapon           = Item.find_by_id(involved_party_element['weaponTypeID']).name
+            ip.ship             = Item.find(involved_party_element['shipTypeID']).name
+            ip.weapon           = Item.find(involved_party_element['weaponTypeID']).name
             ip.damage_done      = involved_party_element['damageDone'].to_i
             ip.final_blow       = involved_party_element['finalblow'] == '1' ? true : false
           end
@@ -91,20 +91,24 @@ module Adam
         kill_element.search('/rowset[@name=items]/row').each do |loot_element|
           if loot_element['qtyDropped'].to_i > 0
             k.loot << Adam::Kill::Loot.new do |l|
-              l.name           = Item.find_by_id(loot_element['typeID']).name
+              l.name           = Item.find(loot_element['typeID']).name
               l.quantity       = loot_element['qtyDropped'].to_i
-              l.cargo     = loot_element['flag'] == '5' ? true : false
-              l.drone_bay      = loot_element['flag'] == '87' ? true : false
+              l.location       = :cargo_bay if loot_element['flag'] == '5'
+              l.location       = :drone_bay if loot_element['flag'] == '87'
+              l.location       = :implant   if loot_element['flag'] == '89'
+              l.location       = :copy      if loot_element['singleton'] == '2'
               l.dropped        = true
             end
           end
 
           if loot_element['qtyDestroyed'].to_i > 0
             k.loot << Adam::Kill::Loot.new do |l|
-              l.name           = Item.find_by_id(loot_element['typeID']).name
+              l.name           = Item.find(loot_element['typeID']).name
               l.quantity       = loot_element['qtyDestroyed'].to_i
-              l.cargo     = loot_element['flag'] == '5' ? true : false
-              l.drone_bay      = loot_element['flag'] == '87' ? true : false
+              l.location       = :cargo_bay if loot_element['flag'] == '5'
+              l.location       = :drone_bay if loot_element['flag'] == '87'
+              l.location       = :implant   if loot_element['flag'] == '89'
+              l.location       = :copy      if loot_element['singleton'] == '2'
               l.dropped        = false
             end
           end

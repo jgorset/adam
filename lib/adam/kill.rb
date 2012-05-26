@@ -74,9 +74,10 @@ module Adam
         destroyed_items.each do |loot|
           killmail << "#{loot.name}"
           killmail << ", Qty: #{loot.quantity}" if loot.quantity > 1
-          killmail << " (Cargo)" if loot.cargo
-          killmail << " (Drone Bay)" if loot.drone_bay
-          killmail << " (Implant)" if loot.implant
+          killmail << " (Cargo)"        if loot.location == :cargo_bay
+          killmail << " (Drone Bay)"    if loot.location == :drone_bay
+          killmail << " (Implant)"      if loot.location == :implant
+          killmail << " (Copy) (Cargo)" if loot.location == :copy
           killmail << "\n"
         end
       end
@@ -89,9 +90,10 @@ module Adam
         dropped_items.each do |loot|
           killmail << "#{loot.name}"
           killmail << ", Qty: #{loot.quantity}" if loot.quantity > 1
-          killmail << " (Cargo)" if loot.cargo
-          killmail << " (Drone Bay)" if loot.drone_bay
-          killmail << " (Implant)" if loot.implant
+          killmail << " (Cargo)"        if loot.location == :cargo_bay
+          killmail << " (Drone Bay)"    if loot.location == :drone_bay
+          killmail << " (Implant)"      if loot.location == :implant
+          killmail << " (Copy) (Cargo)" if loot.location == :copy
           killmail << "\n"
         end
       end
@@ -134,7 +136,7 @@ module Adam
   # * +ship+ - A string describing the name of the ship that was destroyed.
   # * +damage_taken+ - An integer describing damage taken.
   class Kill::Victim
-    attr_accessor :pilot, :corporation, :alliance, :faction, :ship, :damage_taken
+    attr_accessor :pilot, :corporation, :alliance, :faction, :ship, :damage_taken, :moon
     
     def initialize
       yield self if block_given?
@@ -175,19 +177,9 @@ module Adam
   # Accessors:
   # * +name+ - A string describing the name of the item.
   # * +quantity+ - An integer describing the quantity of the item.
-  # * +cargo+ - A boolean describing whether or not this item was in the cargo hold.
-  # * +drone_bay+ - A boolean describing whether or not this item was in the drone bay.
   # * +dropped+ - A boolean describing whether or not this item was dropped.
   class Kill::Loot
-    attr_accessor :name, :quantity, :cargo, :drone_bay, :dropped, :implant
-    
-    def cargo?
-      cargo
-    end
-    
-    def dropped?
-      dropped
-    end
+    attr_accessor :name, :quantity, :dropped, :location
     
     def initialize
       yield self if block_given?
