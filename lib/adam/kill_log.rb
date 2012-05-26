@@ -93,8 +93,10 @@ module Adam
             k.loot << Adam::Kill::Loot.new do |l|
               l.name           = Item.find(loot_element['typeID']).name
               l.quantity       = loot_element['qtyDropped'].to_i
-              l.cargo     = loot_element['flag'] == '5' ? true : false
-              l.drone_bay      = loot_element['flag'] == '87' ? true : false
+              l.location       = :cargo_bay if loot_element['flag'] == '5'
+              l.location       = :drone_bay if loot_element['flag'] == '87'
+              l.location       = :implant   if loot_element['flag'] == '89'
+              l.location       = :copy      if loot_element['singleton'] == '2'
               l.dropped        = true
             end
           end
@@ -103,8 +105,10 @@ module Adam
             k.loot << Adam::Kill::Loot.new do |l|
               l.name           = Item.find(loot_element['typeID']).name
               l.quantity       = loot_element['qtyDestroyed'].to_i
-              l.cargo     = loot_element['flag'] == '5' ? true : false
-              l.drone_bay      = loot_element['flag'] == '87' ? true : false
+              l.location       = :cargo_bay if loot_element['flag'] == '5'
+              l.location       = :drone_bay if loot_element['flag'] == '87'
+              l.location       = :implant   if loot_element['flag'] == '89'
+              l.location       = :copy      if loot_element['singleton'] == '2'
               l.dropped        = false
             end
           end
