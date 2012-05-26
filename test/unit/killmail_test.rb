@@ -58,16 +58,16 @@ class KillmailTest < Test::Unit::TestCase
     assert_equal "Antimatter Charge L", kill.loot[11].name
     assert_equal false, kill.loot[11].dropped
     assert_equal 4322, kill.loot[11].quantity
-    assert_equal true, kill.loot[11].cargo
+    assert_equal :cargo_bay, kill.loot[11].location
     
     assert_equal "Ocular Filter - Improved", kill.loot[16].name
     assert_equal false, kill.loot[16].dropped
-    assert_equal true, kill.loot[16].implant
+    assert_equal :implant, kill.loot[16].location
     
     assert_equal "Exotic Dancers, Female", kill.loot[17].name
     assert_equal false, kill.loot[17].dropped
     assert_equal 2, kill.loot[17].quantity
-    assert_equal true, kill.loot[17].cargo
+    assert_equal :cargo_bay, kill.loot[17].location
   end
   
   private
