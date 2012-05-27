@@ -1,0 +1,31 @@
+2011.11.02 04:25
+
+Corp: Essence Enterprises
+Alliance: None
+Faction: None
+Destroyed: Explosion Dampening Array
+Moon: Noghere VII - Moon 16
+System: Noghere
+Security: 0.7
+Damage Taken: 17085
+
+Involved parties:
+
+Name: Sisko Urso
+Security: 3.2
+Corp: Rage For Order
+Alliance: nihil-obstat
+Faction: None
+Ship: Maelstrom
+Weapon: Maelstrom
+Damage Done: 10102
+
+Name: Spazz21 (laid the final blow)
+Security: 4.3
+Corp: Rage For Order
+Alliance: nihil-obstat
+Faction: None
+Ship: Armageddon
+Weapon: Mega Pulse Laser II
+Damage Done: 3290
+

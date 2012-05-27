@@ -3,6 +3,7 @@ require 'adam/killmail/validation_error'
 SolarSystem rescue require 'models/solar_system'
 Item rescue require 'models/item'
 Faction rescue require 'models/faction'
+Moon rescue require 'models/moon'
 
 require 'time'
 
