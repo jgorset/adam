@@ -70,6 +70,31 @@ class KillmailTest < Test::Unit::TestCase
     assert_equal :cargo_bay, kill.loot[17].location
   end
   
+  def test_corresponding_kill_structure_object
+    kill = Adam::Killmail.parse(load_killmail('valid_structure_killmail.txt'))
+    
+    assert_equal "Essence Enterprises", kill.victim.corporation
+    assert_equal nil, kill.victim.alliance
+    assert_equal nil, kill.victim.faction
+    assert_equal "Explosion Dampening Array", kill.victim.ship
+    assert_equal "Noghere VII - Moon 16", kill.victim.moon
+    assert_equal "Noghere", kill.solar_system.name
+    assert_equal 0.7, kill.solar_system.security_status
+    assert_equal 17085, kill.victim.damage_taken
+    
+    assert_equal :PC, kill.involved_parties[0].type
+    assert_equal "Sisko Urso", kill.involved_parties[0].pilot
+    assert_equal 3.2, kill.involved_parties[0].security_status
+    assert_equal "Rage For Order", kill.involved_parties[0].corporation
+    assert_equal "nihil-obstat", kill.involved_parties[0].alliance
+    assert_equal nil, kill.involved_parties[0].faction
+    assert_equal "Maelstrom", kill.involved_parties[0].ship
+    assert_equal "Maelstrom", kill.involved_parties[0].weapon
+    assert_equal 10102, kill.involved_parties[0].damage_done
+    
+    assert_equal [], kill.loot
+  end
+  
   private
   
   def load_killmail(filename)
